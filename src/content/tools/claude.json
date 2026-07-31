@@ -1,0 +1,14 @@
+{
+  "name": "Claude",
+  "description": "Anthropic 出品的大模型助手，擅长长文本理解、严谨写作与复杂文档分析。",
+  "category": "writing",
+  "url": "https://babawuai.com/products/ai-chat/claude-opus-4-8/",
+  "tags": ["长文本", "写作", "分析"],
+  "icon": "pen",
+  "featured": true,
+  "order": 2,
+  "pricing": "免费额度 + Pro",
+  "platform": "Web / App",
+  "audience": "写作与长文本用户",
+  "freeTier": true
+}

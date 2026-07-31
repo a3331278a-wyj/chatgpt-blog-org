@@ -1,0 +1,42 @@
+---
+/**
+ * 博客列表类页面布局（含侧边栏插槽）
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  breadcrumbs?: { label: string; href?: string }[];
+}
+
+const { title, description, canonical, image, schema, breadcrumbs = [] } = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  image={image}
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    {breadcrumbs.length > 0 && (
+      <div class="mb-6">
+        <Breadcrumb items={breadcrumbs} />
+      </div>
+    )}
+    <div class="grid gap-8 lg:grid-cols-[1fr_280px]">
+      <div class="min-w-0">
+        <slot />
+      </div>
+      <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
+        <slot name="sidebar" />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

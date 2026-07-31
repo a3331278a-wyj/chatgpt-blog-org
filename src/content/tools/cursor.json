@@ -1,0 +1,14 @@
+{
+  "name": "Cursor",
+  "description": "以 AI 为核心的代码编辑器，支持多文件理解、对话式改码与智能重构。",
+  "category": "coding",
+  "url": "https://cursor.com",
+  "tags": ["编辑器", "AI编程"],
+  "icon": "code",
+  "featured": true,
+  "order": 7,
+  "pricing": "免费额度 + 订阅",
+  "platform": "桌面编辑器",
+  "audience": "AI 编程用户",
+  "freeTier": true
+}

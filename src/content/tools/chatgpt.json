@@ -1,0 +1,14 @@
+{
+  "name": "ChatGPT",
+  "description": "OpenAI 旗舰对话产品，适合写作、学习、编程与多模态问答，是入门 AI 的首选工具。",
+  "category": "writing",
+  "url": "https://babawuai.com/products/ai-chat/gpt-5-6-sol/",
+  "tags": ["对话", "写作", "多模态"],
+  "icon": "chat",
+  "featured": true,
+  "order": 1,
+  "pricing": "免费 + Plus",
+  "platform": "Web / App",
+  "audience": "综合用户",
+  "freeTier": true
+}

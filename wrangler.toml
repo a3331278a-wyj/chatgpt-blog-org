@@ -1,0 +1,10 @@
+name = "chatgpt-blog-org"
+compatibility_date = "2024-12-01"
+
+# Cloudflare Pages 静态部署说明：
+# - 构建命令: npm run build
+# - 输出目录: dist
+# - Node.js 版本建议: 18 或 20
+#
+# 本项目为 Astro static 输出，可不使用 wrangler pages 本地预览：
+#   npx wrangler pages dev dist

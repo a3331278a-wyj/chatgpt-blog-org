@@ -1,0 +1,72 @@
+---
+/**
+ * 文章详情页布局
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import TOC from '@components/blog/TOC.astro';
+import type { MarkdownHeading } from 'astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  tags?: string[];
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  breadcrumbs?: { label: string; href?: string }[];
+  headings?: MarkdownHeading[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  image,
+  type = 'article',
+  publishedTime,
+  modifiedTime,
+  author,
+  tags,
+  schema,
+  breadcrumbs = [],
+  headings = [],
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  image={image}
+  type={type}
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  author={author}
+  tags={tags}
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    {breadcrumbs.length > 0 && (
+      <div class="mb-6">
+        <Breadcrumb items={breadcrumbs} />
+      </div>
+    )}
+    <div class="grid gap-10 xl:grid-cols-[1fr_240px]">
+      <article class="min-w-0">
+        <slot />
+      </article>
+      {headings.length > 0 && (
+        <aside class="hidden xl:block">
+          <div class="sticky top-24">
+            <TOC headings={headings} />
+          </div>
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

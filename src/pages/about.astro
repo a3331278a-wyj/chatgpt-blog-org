@@ -1,0 +1,67 @@
+---
+/**
+ * 关于页面
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '关于', url: `${siteConfig.url}/about/` },
+]);
+---
+
+<BaseLayout
+  title="关于我们"
+  description="了解 ChatGPT博客（chatgpt-blog.org）的定位、内容方向、免责声明与联系方式。"
+  canonical="/about/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '关于' }]} />
+
+    <article class="mx-auto mt-6 max-w-3xl">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        关于 ChatGPT博客
+      </h1>
+
+      <section class="prose-blog mt-8" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">网站介绍</h2>
+        <p>
+          <strong>{siteConfig.name}</strong>（{siteConfig.url.replace('https://', '')}）
+          专注于 ChatGPT、Claude、Gemini 等 AI 大模型的教程、评测与实践指南，帮助中文用户选对模型并真正用起来。
+        </p>
+        <p>我们主要覆盖以下内容方向：</p>
+        <ul>
+          <li>模型专栏：ChatGPT / Claude / Gemini / Grok 系统教程</li>
+          <li>评测对比与快讯：按场景选型，跟踪版本变化</li>
+          <li>入门与国内使用说明：合规、安全、可执行</li>
+          <li>进阶技巧与 API 开发：提示词、工作流与接口实战</li>
+          <li>AI 工具导航：写作、绘图、编程、翻译、视频</li>
+        </ul>
+      </section>
+
+      <section class="prose-blog mt-10" aria-labelledby="disclaimer-heading">
+        <h2 id="disclaimer-heading">免责声明</h2>
+        <p>{siteConfig.disclaimer}</p>
+        <p>
+          AI 生成内容可能存在错误或过时信息，请在重要场景中自行核实。第三方工具的功能、价格与可用性可能随时变化，请以官方最新信息为准。
+        </p>
+        <p>
+          更多隐私说明请见 <a href="/privacy/">隐私政策</a>。
+        </p>
+      </section>
+
+      <section class="prose-blog mt-10" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">联系方式</h2>
+        <p>
+          如需内容合作、纠错反馈或商务联系，请发送邮件至：
+          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+        </p>
+        <p>我们欢迎关于选题、教程深度与工具评测的建议。</p>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

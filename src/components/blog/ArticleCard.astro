@@ -1,0 +1,51 @@
+---
+/**
+ * 文章卡片
+ */
+import type { GuideEntry } from '@utils/guides';
+import { formatDate, getCategoryName } from '@utils/guides';
+
+export interface Props {
+  guide: GuideEntry;
+  priority?: boolean;
+}
+
+const { guide, priority = false } = Astro.props;
+const href = `/guides/${guide.id}/`;
+---
+
+<article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover">
+  <a href={href} class="block overflow-hidden bg-ink-100">
+    {
+      guide.data.cover ? (
+        <img
+          src={guide.data.cover}
+          alt={guide.data.coverAlt ?? guide.data.title}
+          width="640"
+          height="360"
+          loading={priority ? 'eager' : 'lazy'}
+          decoding={priority ? 'sync' : 'async'}
+          class="cover-img transition duration-300 group-hover:scale-[1.02]"
+        />
+      ) : (
+        <div class="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-brand-100 to-brand-200">
+          <span class="text-sm font-medium text-brand-700">{getCategoryName(guide.data.category)}</span>
+        </div>
+      )
+    }
+  </a>
+  <div class="p-5">
+    <div class="flex flex-wrap items-center gap-2 text-xs text-ink-500">
+      <span class="tag">{getCategoryName(guide.data.category)}</span>
+      <time datetime={guide.data.pubDate.toISOString()}>{formatDate(guide.data.pubDate)}</time>
+    </div>
+    <h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950">
+      <a href={href} class="hover:text-brand-700">
+        {guide.data.title}
+      </a>
+    </h3>
+    <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">
+      {guide.data.description}
+    </p>
+  </div>
+</article>

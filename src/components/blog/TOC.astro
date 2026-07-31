@@ -1,0 +1,33 @@
+---
+/**
+ * 文章目录（TOC）
+ */
+import type { MarkdownHeading } from 'astro';
+
+export interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{
+  filtered.length > 0 && (
+    <nav class="sidebar-card" aria-label="文章目录">
+      <p class="text-sm font-semibold text-ink-900">本页目录</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        {filtered.map((heading) => (
+          <li class:list={[heading.depth === 3 && 'pl-3']}>
+            <a
+              href={`#${heading.slug}`}
+              class="block text-ink-600 transition hover:text-brand-600"
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

@@ -1,0 +1,44 @@
+---
+/**
+ * 标签云总览
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site';
+import { getTagCloud, tagToParam } from '@utils/guides';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const tags = await getTagCloud();
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '标签', url: `${siteConfig.url}/tags/` },
+]);
+---
+
+<BaseLayout
+  title="文章标签"
+  description="按标签浏览 ChatGPT、Claude、Gemini 教程：入门、API、提示词、对比、绘图等主题聚合。"
+  canonical="/tags/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '标签' }]} />
+    <header class="mt-6 max-w-2xl">
+      <h1 class="font-display text-3xl font-bold text-ink-950">文章标签</h1>
+      <p class="mt-3 text-ink-600">通过标签快速定位主题内容，共 {tags.length} 个标签。</p>
+    </header>
+    <div class="mt-8 flex flex-wrap gap-3">
+      {
+        tags.map(({ tag, count }) => (
+          <a
+            href={`/tags/${tagToParam(tag)}/`}
+            class="rounded-lg border border-ink-200 bg-white px-4 py-2 text-sm text-ink-800 transition hover:border-brand-300 hover:bg-brand-50"
+          >
+            {tag}
+            <span class="ml-2 text-ink-400">{count}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

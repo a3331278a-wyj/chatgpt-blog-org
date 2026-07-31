@@ -1,0 +1,14 @@
+{
+  "name": "Perplexity",
+  "description": "带引用的 AI 搜索引擎，适合快速调研、事实核对与获取带链接的答案。",
+  "category": "writing",
+  "url": "https://www.perplexity.ai",
+  "tags": ["搜索", "调研", "引用"],
+  "icon": "sparkles",
+  "featured": false,
+  "order": 10,
+  "pricing": "免费 + Pro",
+  "platform": "Web / App",
+  "audience": "调研用户",
+  "freeTier": true
+}

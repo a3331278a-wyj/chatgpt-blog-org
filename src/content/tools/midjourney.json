@@ -1,0 +1,14 @@
+{
+  "name": "Midjourney",
+  "description": "顶级 AI 绘图工具，以艺术风格与画面质感见长，适合概念设计与创意视觉。",
+  "category": "image",
+  "url": "https://www.midjourney.com",
+  "tags": ["绘图", "设计", "创意"],
+  "icon": "image",
+  "featured": true,
+  "order": 4,
+  "pricing": "订阅制",
+  "platform": "Web / Discord",
+  "audience": "设计师与创作者",
+  "freeTier": false
+}

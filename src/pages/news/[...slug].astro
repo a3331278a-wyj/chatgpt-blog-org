@@ -1,0 +1,69 @@
+---
+/**
+ * 快讯详情
+ */
+import { render } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site';
+import { getPublishedNews, formatNewsDate, type NewsEntry } from '@utils/news';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+export async function getStaticPaths() {
+  const news = await getPublishedNews();
+  return news.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: NewsEntry;
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const pageUrl = `${siteConfig.url}/news/${item.id}/`;
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '快讯', url: `${siteConfig.url}/news/` },
+  { name: item.data.title, url: pageUrl },
+]);
+---
+
+<BaseLayout
+  title={item.data.title}
+  description={item.data.description}
+  canonical={`/news/${item.id}/`}
+  type="article"
+  publishedTime={item.data.pubDate.toISOString()}
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb
+      items={[
+        { label: '首页', href: '/' },
+        { label: '快讯', href: '/news/' },
+        { label: item.data.title },
+      ]}
+    />
+    <article class="mx-auto mt-6 max-w-3xl">
+      <header class="border-b border-ink-200 pb-6">
+        <p class="text-sm text-ink-500">
+          <time datetime={item.data.pubDate.toISOString()}>{formatNewsDate(item.data.pubDate)}</time>
+        </p>
+        <h1 class="mt-3 font-display text-3xl font-bold tracking-tight text-ink-950">
+          {item.data.title}
+        </h1>
+        <p class="mt-3 text-ink-600">{item.data.description}</p>
+      </header>
+      <div class="prose-blog mt-8">
+        <Content />
+      </div>
+      <p class="mt-10 text-sm">
+        <a href="/news/" class="font-semibold text-brand-600 hover:underline">← 返回快讯列表</a>
+      </p>
+    </article>
+  </div>
+</BaseLayout>

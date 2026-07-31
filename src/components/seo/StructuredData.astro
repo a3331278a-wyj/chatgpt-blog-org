@@ -1,0 +1,13 @@
+---
+/**
+ * JSON-LD 结构化数据
+ */
+export interface Props {
+  data: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { data } = Astro.props;
+const json = JSON.stringify(data, null, 0);
+---
+
+<script is:inline type="application/ld+json" set:html={json} />

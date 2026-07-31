@@ -1,0 +1,14 @@
+{
+  "name": "GitHub Copilot",
+  "description": "面向开发者的 AI 编程助手，可在 IDE 中补全代码、解释逻辑并协助重构。",
+  "category": "coding",
+  "url": "https://github.com/features/copilot",
+  "tags": ["编程", "IDE", "补全"],
+  "icon": "code",
+  "featured": true,
+  "order": 6,
+  "pricing": "订阅制",
+  "platform": "IDE",
+  "audience": "开发者",
+  "freeTier": true
+}

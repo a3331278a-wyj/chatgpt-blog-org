@@ -1,0 +1,81 @@
+---
+/**
+ * 单标签文章列表
+ */
+import BlogLayout from '@layouts/BlogLayout.astro';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import Sidebar from '@components/blog/Sidebar.astro';
+import { siteConfig } from '@config/site';
+import {
+  getPublishedGuides,
+  getTagCloud,
+  getGuidesByTag,
+  tagToParam,
+  paramToTag,
+} from '@utils/guides';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+export async function getStaticPaths() {
+  const tags = await getTagCloud();
+  return tags.map(({ tag }) => ({
+    params: { tag: tagToParam(tag) },
+    props: { tag },
+  }));
+}
+
+interface Props {
+  tag: string;
+}
+
+const { tag: tagProp } = Astro.props;
+const tag = tagProp ?? paramToTag(Astro.params.tag ?? '');
+const guides = await getGuidesByTag(tag);
+const allGuides = await getPublishedGuides();
+const tags = await getTagCloud();
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '标签', url: `${siteConfig.url}/tags/` },
+  { name: tag, url: `${siteConfig.url}/tags/${tagToParam(tag)}/` },
+]);
+---
+
+<BlogLayout
+  title={`标签：${tag}`}
+  description={`浏览标签「${tag}」下的 AI 教程与指南，共 ${guides.length} 篇文章。`}
+  canonical={`/tags/${tagToParam(tag)}/`}
+  schema={schema}
+  breadcrumbs={[
+    { label: '首页', href: '/' },
+    { label: '标签', href: '/tags/' },
+    { label: tag },
+  ]}
+>
+  <header class="mb-8">
+    <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950">
+      标签：{tag}
+    </h1>
+    <p class="mt-2 text-ink-600">
+      共 {guides.length} 篇文章 ·
+      <a href="/tags/" class="text-brand-600 hover:underline">全部标签</a>
+    </p>
+  </header>
+
+  {
+    guides.length === 0 ? (
+      <p class="rounded-xl border border-dashed border-ink-200 p-10 text-center text-ink-500">
+        该标签暂无文章。
+      </p>
+    ) : (
+      <div class="grid gap-6 sm:grid-cols-2">
+        {guides.map((guide) => (
+          <ArticleCard guide={guide} />
+        ))}
+      </div>
+    )
+  }
+
+  <Fragment slot="sidebar">
+    <Sidebar popularGuides={allGuides} tags={tags} />
+  </Fragment>
+</BlogLayout>

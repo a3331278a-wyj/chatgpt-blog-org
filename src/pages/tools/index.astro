@@ -1,0 +1,105 @@
+---
+/**
+ * AI 工具推荐页（含对比表）
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import ToolCard from '@components/tools/ToolCard.astro';
+import { siteConfig } from '@config/site';
+import { getToolsByCategory, getAllTools } from '@utils/tools';
+import { getToolCategoryName } from '@utils/tools';
+import { buildItemListSchema, buildBreadcrumbSchema } from '@utils/schema';
+
+const groups = await getToolsByCategory();
+const allTools = await getAllTools();
+
+const schema = [
+  buildItemListSchema(
+    allTools.map((t) => ({
+      name: t.data.name,
+      description: t.data.description,
+      url: t.data.url,
+    })),
+  ),
+  buildBreadcrumbSchema([
+    { name: '首页', url: siteConfig.url },
+    { name: 'AI 工具', url: `${siteConfig.url}/tools/` },
+  ]),
+];
+---
+
+<BaseLayout
+  title="AI 工具推荐与对比"
+  description="精选写作、绘图、编程、翻译、视频 AI 工具，含是否免费、平台与适合人群对比，覆盖 ChatGPT、Claude、Gemini 生态。"
+  canonical="/tools/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'AI 工具' }]} />
+
+    <header class="mt-6 mb-10 max-w-2xl">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        AI 工具推荐
+      </h1>
+      <p class="mt-3 text-ink-600">
+        按场景整理工具清单，并提供免费与否、平台、适合人群对照，帮你快速筛选。
+      </p>
+    </header>
+
+    <section class="mb-14" aria-labelledby="tool-compare">
+      <h2 id="tool-compare" class="font-display text-2xl font-bold text-ink-950">工具对比速览</h2>
+      <div class="mt-5 overflow-x-auto rounded-xl border border-ink-200 bg-white shadow-sm">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-ink-50 text-ink-600">
+            <tr>
+              <th class="px-4 py-3 font-semibold">工具</th>
+              <th class="px-4 py-3 font-semibold">分类</th>
+              <th class="px-4 py-3 font-semibold">免费额度</th>
+              <th class="px-4 py-3 font-semibold">价格概况</th>
+              <th class="px-4 py-3 font-semibold">平台</th>
+              <th class="px-4 py-3 font-semibold">适合人群</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              allTools.map((tool) => (
+                <tr class="border-t border-ink-100">
+                  <td class="px-4 py-3 font-semibold">
+                    <a href={`/tools/${tool.id}/`} class="text-brand-700 hover:underline">
+                      {tool.data.name}
+                    </a>
+                  </td>
+                  <td class="px-4 py-3 text-ink-700">{getToolCategoryName(tool.data.category)}</td>
+                  <td class="px-4 py-3 text-ink-700">{tool.data.freeTier ? '有' : '基本无'}</td>
+                  <td class="px-4 py-3 text-ink-700">{tool.data.pricing}</td>
+                  <td class="px-4 py-3 text-ink-700">{tool.data.platform}</td>
+                  <td class="px-4 py-3 text-ink-700">{tool.data.audience}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="space-y-14">
+      {
+        groups.map(({ category, tools }) => (
+          <section aria-labelledby={`cat-${category.slug}`}>
+            <div class="mb-5 flex items-end justify-between gap-4">
+              <h2 id={`cat-${category.slug}`} class="font-display text-2xl font-bold text-ink-950">
+                {category.name}
+              </h2>
+              <span class="text-sm text-ink-500">{tools.length} 款工具</span>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {tools.map((tool) => (
+                <ToolCard tool={tool} />
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

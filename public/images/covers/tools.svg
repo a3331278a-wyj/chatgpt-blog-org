@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1020" cy="120" r="150" fill="#c4b5fd" fill-opacity="0.25"/>
+  <rect x="80" y="210" width="12" height="160" rx="6" fill="#ffffff"/>
+  <text x="110" y="290" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">AI Tools</text>
+  <text x="110" y="360" fill="#ede9fe" font-family="Arial, Helvetica, sans-serif" font-size="34">Image / Coding / Productivity</text>
+</svg>

@@ -1,0 +1,251 @@
+---
+/**
+ * 首页：三大入口 + 模型专栏 + 精选 + 工具 + FAQ + 免责声明
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import ToolCard from '@components/tools/ToolCard.astro';
+import FAQ from '@components/common/FAQ.astro';
+import ToolIcon from '@components/tools/ToolIcon.astro';
+import {
+  siteConfig,
+  categories,
+  faqs,
+  homePillars,
+  modelHubs,
+} from '@config/site';
+import { getFeaturedGuides } from '@utils/guides';
+import { getFeaturedTools } from '@utils/tools';
+import { getPublishedNews, formatNewsDate } from '@utils/news';
+import { buildWebSiteSchema, buildFaqSchema } from '@utils/schema';
+
+const featuredGuides = await getFeaturedGuides(6);
+const featuredTools = await getFeaturedTools(8);
+const latestNews = (await getPublishedNews()).slice(0, 4);
+const schema = [buildWebSiteSchema(), buildFaqSchema(faqs)];
+---
+
+<BaseLayout
+  title={siteConfig.title}
+  description={siteConfig.description}
+  schema={schema}
+  bodyClass="bg-hero"
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden" aria-labelledby="hero-heading">
+    <div class="container-site py-14 sm:py-18 lg:py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
+          chatgpt-blog.org
+        </p>
+        <h1
+          id="hero-heading"
+          class="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink-950 text-balance sm:text-4xl lg:text-5xl"
+        >
+          全球 AI 大模型学习与实践指南
+        </h1>
+        <p class="section-desc mx-auto mt-5">
+          深度解析 ChatGPT、Claude、Gemini：覆盖国内使用说明、新手教程、模型评测对比、API 开发与实用工具推荐。
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/guides/" class="btn-primary">浏览实用教程</a>
+          <a href="/compare/" class="btn-secondary">查看模型对比</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 免责声明 -->
+  <div class="container-site pb-8">
+    <aside
+      class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950"
+      role="note"
+    >
+      <strong class="font-semibold">免责声明：</strong>
+      {siteConfig.disclaimer}
+    </aside>
+  </div>
+
+  <!-- 三大入口 -->
+  <section class="container-site pb-16" aria-labelledby="pillars-heading">
+    <h2 id="pillars-heading" class="sr-only">核心栏目</h2>
+    <div class="grid gap-5 md:grid-cols-3">
+      {
+        homePillars.map((pillar) => (
+          <a
+            href={pillar.href}
+            class="group rounded-2xl border border-ink-200 bg-white p-6 shadow-sm transition hover:border-brand-300 hover:shadow-md"
+          >
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <ToolIcon name={pillar.icon} />
+            </span>
+            <h3 class="mt-4 font-display text-xl font-bold text-ink-950 group-hover:text-brand-700">
+              {pillar.title}
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-600">{pillar.description}</p>
+            <span class="mt-4 inline-flex text-sm font-semibold text-brand-600">
+              {pillar.cta} →
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- 模型专栏 -->
+  <section class="border-y border-ink-200 bg-white py-16" aria-labelledby="models-heading">
+    <div class="container-site">
+      <h2 id="models-heading" class="section-title text-center">主流大模型专栏</h2>
+      <p class="section-desc mx-auto text-center">按模型深入学习，快速找到合适路径。</p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          modelHubs.map((hub) => (
+            <article class="rounded-2xl border border-ink-200 bg-ink-50/40 p-6">
+              <p class="text-xs font-semibold uppercase tracking-wide text-ink-500">{hub.vendor}</p>
+              <h3 class="mt-1 font-display text-xl font-bold text-ink-950">
+                <a href={hub.href} class="hover:text-brand-700">
+                  {hub.name}
+                </a>
+              </h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink-600">{hub.tagline}</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                {'productUrl' in hub && hub.productUrl ? (
+                  <a
+                    href={hub.productUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex text-sm font-semibold text-brand-600 hover:text-brand-700"
+                  >
+                    立即体验 →
+                  </a>
+                ) : null}
+                <a href={hub.href} class="inline-flex text-sm font-semibold text-ink-500 hover:text-brand-700">
+                  进入专栏 →
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选文章 -->
+  <section class="container-site py-16" aria-labelledby="featured-heading">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 id="featured-heading" class="section-title">精选文章</h2>
+        <p class="section-desc">高意图教程优先更新：入门、国内使用、付费对比与模型选型。</p>
+      </div>
+      <a href="/guides/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">
+        查看全部 →
+      </a>
+    </div>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        featuredGuides.map((guide, index) => (
+          <ArticleCard guide={guide} priority={index === 0} />
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- 快讯 -->
+  <section class="border-y border-ink-200 bg-white py-16" aria-labelledby="news-heading">
+    <div class="container-site">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 id="news-heading" class="section-title">最新快讯</h2>
+          <p class="section-desc">跟踪模型更新与工作流变化，短讯速览。</p>
+        </div>
+        <a href="/news/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">
+          全部快讯 →
+        </a>
+      </div>
+      <ul class="mt-8 grid gap-4 md:grid-cols-2">
+        {
+          latestNews.map((item) => (
+            <li>
+              <a
+                href={`/news/${item.id}/`}
+                class="block h-full rounded-xl border border-ink-200 bg-ink-50/40 p-5 transition hover:border-brand-300"
+              >
+                <time class="text-xs text-ink-500" datetime={item.data.pubDate.toISOString()}>
+                  {formatNewsDate(item.data.pubDate)}
+                </time>
+                <span class="mt-2 block font-semibold text-ink-950">{item.data.title}</span>
+                <span class="mt-2 block text-sm text-ink-600">{item.data.description}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- 分类导航 -->
+  <section class="border-y border-ink-200 bg-white py-16" aria-labelledby="categories-heading">
+    <div class="container-site">
+      <h2 id="categories-heading" class="section-title text-center">按主题学习</h2>
+      <p class="section-desc mx-auto text-center">从入门到 API，覆盖完整学习路径。</p>
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          categories.map((cat) => (
+            <a
+              href={`/guides/category/${cat.slug}/`}
+              class="group rounded-xl border border-ink-200 bg-ink-50/50 p-5 transition hover:border-brand-300 hover:bg-brand-50/40"
+            >
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white text-brand-700 shadow-sm ring-1 ring-ink-100">
+                <ToolIcon name={cat.icon} />
+              </span>
+              <h3 class="mt-4 font-display text-lg font-bold text-ink-950 group-hover:text-brand-700">
+                {cat.name}
+              </h3>
+              <p class="mt-1.5 text-sm text-ink-600">{cat.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门工具 -->
+  <section class="container-site py-16" aria-labelledby="tools-heading">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 id="tools-heading" class="section-title">热门工具推荐</h2>
+        <p class="section-desc">精选写作、绘图、编程、翻译与视频生成工具。</p>
+      </div>
+      <a href="/tools/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">
+        全部工具 →
+      </a>
+    </div>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {featuredTools.map((tool) => <ToolCard tool={tool} />)}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-t border-ink-200 bg-white py-16" aria-labelledby="faq-heading">
+    <div class="container-site">
+      <div class="mx-auto max-w-3xl">
+        <div class="text-center">
+          <h2 id="faq-heading" class="section-title">常见问题</h2>
+          <p class="section-desc mx-auto">注册、付费、国内使用与模型选择的快速解答。</p>
+        </div>
+        <div class="mt-8">
+          <FAQ items={faqs.slice(0, 6)} />
+        </div>
+        <p class="mt-6 text-center text-sm">
+          <a href="/faq/" class="font-semibold text-brand-600 hover:text-brand-700">
+            查看全部常见问题 →
+          </a>
+          <span class="mx-2 text-ink-300">|</span>
+          <a href="/access/" class="font-semibold text-brand-600 hover:text-brand-700">
+            访问与使用说明 →
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

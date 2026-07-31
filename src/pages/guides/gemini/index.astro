@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import ModelHub from '@components/blog/ModelHub.astro';
+import { siteConfig, modelHubs } from '@config/site';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const hub = modelHubs.find((h) => h.slug === 'gemini')!;
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '教程指南', url: `${siteConfig.url}/guides/` },
+  { name: hub.name, url: `${siteConfig.url}${hub.href}` },
+]);
+---
+
+<BaseLayout title={`${hub.name} 教程中心`} description={hub.description} canonical={hub.href} schema={schema}>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '教程指南', href: '/guides/' }, { label: hub.name }]} />
+    <ModelHub model="gemini" />
+  </div>
+</BaseLayout>

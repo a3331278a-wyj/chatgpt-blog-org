@@ -1,0 +1,14 @@
+{
+  "name": "Gemini",
+  "description": "Google 大模型产品，与搜索和 Workspace 协作紧密，适合检索增强与办公场景。",
+  "category": "writing",
+  "url": "https://babawuai.com/products/ai-chat/gemini-3-5-flash/",
+  "tags": ["Google", "办公", "检索"],
+  "icon": "sparkles",
+  "featured": true,
+  "order": 3,
+  "pricing": "免费 + Google AI 订阅",
+  "platform": "Web / App",
+  "audience": "Google 生态用户",
+  "freeTier": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "DALL·E",
+  "description": "OpenAI 的文生图模型，可在 ChatGPT 中直接使用，适合快速出图与产品配图。",
+  "category": "image",
+  "url": "https://openai.com/dall-e-3",
+  "tags": ["文生图", "OpenAI"],
+  "icon": "image",
+  "featured": false,
+  "order": 5,
+  "pricing": "含在 ChatGPT 套餐",
+  "platform": "ChatGPT",
+  "audience": "快速配图用户",
+  "freeTier": true
+}

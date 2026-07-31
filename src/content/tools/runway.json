@@ -1,0 +1,14 @@
+{
+  "name": "Runway",
+  "description": "领先的 AI 视频生成与剪辑平台，支持文生视频、图生视频与创意特效。",
+  "category": "video",
+  "url": "https://runwayml.com",
+  "tags": ["视频", "生成", "剪辑"],
+  "icon": "video",
+  "featured": true,
+  "order": 9,
+  "pricing": "订阅制",
+  "platform": "Web",
+  "audience": "视频创作者",
+  "freeTier": true
+}

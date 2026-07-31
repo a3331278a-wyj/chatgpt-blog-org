@@ -1,0 +1,75 @@
+---
+/**
+ * 模型专栏内容区块（由各专栏页传入 hub slug）
+ */
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import { modelHubs, type ModelSlug } from '@config/site';
+import { getGuidesByModel } from '@utils/guides';
+
+export interface Props {
+  model: ModelSlug;
+}
+
+const { model } = Astro.props;
+const hub = modelHubs.find((h) => h.slug === model)!;
+const guides = await getGuidesByModel(model);
+---
+
+<header class="mt-6 max-w-3xl">
+  <p class="text-sm font-semibold text-brand-600">{hub.vendor}</p>
+  <h1 class="mt-2 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+    {hub.name} 教程中心
+  </h1>
+  <p class="mt-4 text-lg text-ink-600">{hub.tagline}</p>
+</header>
+
+<div class="mt-8 grid gap-4 sm:grid-cols-2">
+  <section class="rounded-xl border border-ink-200 bg-white p-5">
+    <h2 class="text-sm font-semibold text-ink-900">核心优势</h2>
+    <ul class="mt-3 space-y-2 text-sm text-ink-700">
+      {hub.strengths.map((item) => <li>• {item}</li>)}
+    </ul>
+  </section>
+  <section class="rounded-xl border border-ink-200 bg-white p-5">
+    <h2 class="text-sm font-semibold text-ink-900">更适合</h2>
+    <ul class="mt-3 space-y-2 text-sm text-ink-700">
+      {hub.bestFor.map((item) => <li>• {item}</li>)}
+    </ul>
+  </section>
+</div>
+
+<div class="mt-6 flex flex-wrap gap-3">
+  {
+    'productUrl' in hub && hub.productUrl ? (
+      <a
+        href={hub.productUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        立即体验 {hub.name}
+      </a>
+    ) : null
+  }
+  <a href="/compare/" class="btn-secondary">与其他模型对比</a>
+  <a href="/guides/" class="btn-secondary">全部教程</a>
+</div>
+
+<section class="mt-12" aria-labelledby="hub-articles">
+  <h2 id="hub-articles" class="font-display text-2xl font-bold text-ink-950">
+    {hub.name} 相关文章
+  </h2>
+  {
+    guides.length === 0 ? (
+      <p class="mt-6 rounded-xl border border-dashed border-ink-200 p-8 text-ink-500">
+        专栏文章正在准备中。
+      </p>
+    ) : (
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {guides.map((guide) => (
+          <ArticleCard guide={guide} />
+        ))}
+      </div>
+    )
+  }
+</section>

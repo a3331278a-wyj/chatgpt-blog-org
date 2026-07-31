@@ -1,0 +1,97 @@
+---
+/**
+ * 合规访问与使用说明（非灰产镜像导流）
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '访问与使用说明', url: `${siteConfig.url}/access/` },
+]);
+---
+
+<BaseLayout
+  title="ChatGPT 访问与使用说明"
+  description="合规了解 ChatGPT、Claude、Gemini 的访问与使用路径：官方产品、API/企业方案与国内可用替代，强调安全与法律边界。"
+  canonical="/access/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '访问与使用说明' }]} />
+
+    <article class="mx-auto mt-6 max-w-3xl">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        ChatGPT 访问与使用说明
+      </h1>
+      <p class="mt-4 text-ink-600">
+        本页只提供合规、可核对的信息框架，帮助你判断适合自己的使用路径。本站不提供、不维护任何违规访问工具列表。
+      </p>
+
+      <aside class="mt-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950" role="note">
+        <strong>重要：</strong>{siteConfig.disclaimer}
+      </aside>
+
+      <div class="prose-blog mt-10">
+        <h2>路径一：官方产品</h2>
+        <p>若你所在地区在官方支持范围内，优先使用官方网站与 App，可获得最新功能与完整账户体系。</p>
+        <ul>
+          <li>
+            ChatGPT：
+            <a href="https://babawuai.com/products/ai-chat/gpt-5-6-sol/" target="_blank" rel="noopener noreferrer">
+              立即体验 GPT
+            </a>
+          </li>
+          <li>
+            Claude：
+            <a href="https://babawuai.com/products/ai-chat/claude-opus-4-8/" target="_blank" rel="noopener noreferrer">
+              立即体验 Claude
+            </a>
+          </li>
+          <li>
+            Gemini：
+            <a href="https://babawuai.com/products/ai-chat/gemini-3-5-flash/" target="_blank" rel="noopener noreferrer">
+              立即体验 Gemini
+            </a>
+          </li>
+          <li>
+            Grok：
+            <a href="https://babawuai.com/products/ai-chat/grok-4-5/" target="_blank" rel="noopener noreferrer">
+              立即体验 Grok
+            </a>
+          </li>
+        </ul>
+
+        <h2>路径二：官方 API / 企业方案</h2>
+        <p>适合开发者与团队把模型能力接入自有产品。密钥放服务端，做好权限、审计与成本控制。</p>
+        <p>
+          可参考：
+          <a href="/guides/openai-api-nodejs-guide/">OpenAI API 入门</a>
+          、
+          <a href="/guides/openai-api-streaming-cost/">流式输出与成本控制</a>
+        </p>
+
+        <h2>路径三：国内可用替代产品</h2>
+        <p>若你的目标是完成写作、学习、编程辅助，国内可正常使用的大模型往往更直接，例如通义千问、Kimi、豆包、文心一言等。请以各产品官方渠道为准。</p>
+
+        <h2>安全红线</h2>
+        <ul>
+          <li>不要在来路不明的网站输入账号密码或支付信息</li>
+          <li>不要上传身份证、银行卡、未公开商业机密</li>
+          <li>对医疗、法律、投资类输出必须人工复核</li>
+          <li>不要使用或传播明显违法违规的访问方式</li>
+        </ul>
+
+        <h2>延伸阅读</h2>
+        <ul>
+          <li><a href="/guides/chatgpt-china-usage-guide-2026/">ChatGPT 国内使用完整指南（2026）</a></li>
+          <li><a href="/guides/chatgpt-access-troubleshooting/">常见访问与报错排查</a></li>
+          <li><a href="/faq/">常见问题 FAQ</a></li>
+          <li><a href="/privacy/">隐私政策</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

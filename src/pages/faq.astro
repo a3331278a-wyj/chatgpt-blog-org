@@ -1,0 +1,38 @@
+---
+/**
+ * 常见问题独立页
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import FAQ from '@components/common/FAQ.astro';
+import { siteConfig, faqs } from '@config/site';
+import { buildBreadcrumbSchema, buildFaqSchema } from '@utils/schema';
+
+const schema = [
+  buildFaqSchema(faqs),
+  buildBreadcrumbSchema([
+    { name: '首页', url: siteConfig.url },
+    { name: '常见问题', url: `${siteConfig.url}/faq/` },
+  ]),
+];
+---
+
+<BaseLayout
+  title="常见问题 FAQ"
+  description="ChatGPT 注册、Plus 付费、国内使用、模型选择、隐私安全与提示词等常见问题解答。"
+  canonical="/faq/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '常见问题' }]} />
+    <header class="mx-auto mt-6 max-w-3xl">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        常见问题 FAQ
+      </h1>
+      <p class="mt-3 text-ink-600">关于注册、付费、访问限制、模型选型与安全使用的集中解答。</p>
+    </header>
+    <div class="mx-auto mt-8 max-w-3xl">
+      <FAQ items={faqs} />
+    </div>
+  </div>
+</BaseLayout>

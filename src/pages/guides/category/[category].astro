@@ -1,0 +1,74 @@
+---
+/**
+ * 分类文章列表
+ */
+import BlogLayout from '@layouts/BlogLayout.astro';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import Sidebar from '@components/blog/Sidebar.astro';
+import { siteConfig, categories, type CategorySlug } from '@config/site';
+import {
+  getPublishedGuides,
+  getTagCloud,
+  getCategoryName,
+  paginate,
+} from '@utils/guides';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { category: cat.slug },
+  }));
+}
+
+const { category } = Astro.params;
+const categorySlug = category as CategorySlug;
+
+const allGuides = await getPublishedGuides();
+const tags = await getTagCloud();
+const filtered = allGuides.filter((g) => g.data.category === categorySlug);
+const { items, total } = paginate(filtered, 1, siteConfig.postsPerPage);
+const categoryName = getCategoryName(categorySlug);
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '教程指南', url: `${siteConfig.url}/guides/` },
+  { name: categoryName, url: `${siteConfig.url}/guides/category/${categorySlug}/` },
+]);
+---
+
+<BlogLayout
+  title={`${categoryName}教程`}
+  description={`浏览「${categoryName}」分类下的 AI 大模型教程与实践文章，共 ${total} 篇。`}
+  canonical={`/guides/category/${categorySlug}/`}
+  schema={schema}
+  breadcrumbs={[
+    { label: '首页', href: '/' },
+    { label: '教程指南', href: '/guides/' },
+    { label: categoryName },
+  ]}
+>
+  <header class="mb-8">
+    <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950">{categoryName}</h1>
+    <p class="mt-2 text-ink-600">
+      共 {total} 篇文章 · <a href="/guides/" class="text-brand-600 hover:underline">查看全部</a>
+    </p>
+  </header>
+
+  {
+    items.length === 0 ? (
+      <p class="rounded-xl border border-dashed border-ink-200 bg-white p-10 text-center text-ink-500">
+        该分类暂无文章，请稍后再来。
+      </p>
+    ) : (
+      <div class="grid gap-6 sm:grid-cols-2">
+        {items.map((guide) => (
+          <ArticleCard guide={guide} />
+        ))}
+      </div>
+    )
+  }
+
+  <Fragment slot="sidebar">
+    <Sidebar popularGuides={allGuides} tags={tags} activeCategory={categorySlug} />
+  </Fragment>
+</BlogLayout>

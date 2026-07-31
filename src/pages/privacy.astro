@@ -1,0 +1,53 @@
+---
+/**
+ * 隐私政策
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '隐私政策', url: `${siteConfig.url}/privacy/` },
+]);
+---
+
+<BaseLayout
+  title="隐私政策"
+  description="了解 ChatGPT博客如何处理访问数据、Cookie 与联系信息，以及我们的内容免责声明。"
+  canonical="/privacy/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '隐私政策' }]} />
+    <article class="prose-blog mx-auto mt-6 max-w-3xl">
+      <h1>隐私政策</h1>
+      <p>更新日期：2026-07-31</p>
+      <p>
+        {siteConfig.name}（{siteConfig.url.replace('https://', '')}）重视用户隐私。本站主要为静态内容站点，默认不会要求你注册账号。
+      </p>
+      <h2>我们可能收集的信息</h2>
+      <ul>
+        <li>基础访问日志（由托管平台如 Cloudflare 处理）：IP、User-Agent、访问路径、时间戳</li>
+        <li>你主动发送到邮箱的联系内容</li>
+        <li>若未来启用分析或评论服务，将另行说明并尽量使用隐私友好方案</li>
+      </ul>
+      <h2>Cookie</h2>
+      <p>
+        当前站点不以广告追踪为目的设置 Cookie。若后续引入统计分析工具，我们会在此更新说明。
+      </p>
+      <h2>第三方链接</h2>
+      <p>
+        文章中可能链接到 OpenAI、Anthropic、Google 等第三方网站。你访问这些网站时，适用对方的隐私政策。
+      </p>
+      <h2>内容免责</h2>
+      <p>{siteConfig.disclaimer}</p>
+      <h2>联系我们</h2>
+      <p>
+        如有隐私相关问题，请邮件联系：
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </p>
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+{
+  "name": "DeepL",
+  "description": "高质量 AI 翻译工具，在欧语和中英互译场景表现出色，适合文档与邮件翻译。",
+  "category": "translate",
+  "url": "https://www.deepl.com",
+  "tags": ["翻译", "文档"],
+  "icon": "translate",
+  "featured": true,
+  "order": 8,
+  "pricing": "免费 + Pro",
+  "platform": "Web / App",
+  "audience": "翻译与本地化",
+  "freeTier": true
+}

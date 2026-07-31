@@ -1,0 +1,102 @@
+---
+/**
+ * 模型评测对比中心
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/common/Breadcrumb.astro';
+import { siteConfig, modelComparison, modelHubs } from '@config/site';
+import { buildBreadcrumbSchema } from '@utils/schema';
+
+const schema = buildBreadcrumbSchema([
+  { name: '首页', url: siteConfig.url },
+  { name: '模型评测', url: `${siteConfig.url}/compare/` },
+]);
+---
+
+<BaseLayout
+  title="ChatGPT vs Claude vs Gemini 评测对比"
+  description="从写作、编程、长文本、多模态、价格与适用场景客观对比 ChatGPT、Claude、Gemini，帮助你按任务选对大模型。"
+  canonical="/compare/"
+  schema={schema}
+>
+  <div class="container-site py-8 lg:py-10">
+    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '模型评测' }]} />
+
+    <header class="mt-6 max-w-3xl">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        ChatGPT vs Claude vs Gemini 评测对比
+      </h1>
+      <p class="mt-4 text-ink-600">
+        没有绝对最强的模型，只有更适合当前任务的选择。下表按常见场景给出对照，详细教程见各模型专栏。
+      </p>
+    </header>
+
+    <div class="mt-10 overflow-x-auto rounded-xl border border-ink-200 bg-white shadow-sm">
+      <table class="min-w-full text-left text-sm">
+        <thead class="bg-ink-50 text-ink-600">
+          <tr>
+            <th class="px-4 py-3 font-semibold">模型</th>
+            <th class="px-4 py-3 font-semibold">写作</th>
+            <th class="px-4 py-3 font-semibold">编程</th>
+            <th class="px-4 py-3 font-semibold">长文本</th>
+            <th class="px-4 py-3 font-semibold">多模态</th>
+            <th class="px-4 py-3 font-semibold">价格概况</th>
+            <th class="px-4 py-3 font-semibold">更适合</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            modelComparison.map((row) => (
+              <tr class="border-t border-ink-100">
+                <td class="px-4 py-3 font-semibold text-ink-950">
+                  <a href={row.href} class="text-brand-700 hover:underline">
+                    {row.name}
+                  </a>
+                </td>
+                <td class="px-4 py-3 text-ink-700">{row.writing}</td>
+                <td class="px-4 py-3 text-ink-700">{row.coding}</td>
+                <td class="px-4 py-3 text-ink-700">{row.longContext}</td>
+                <td class="px-4 py-3 text-ink-700">{row.multimodal}</td>
+                <td class="px-4 py-3 text-ink-700">{row.pricing}</td>
+                <td class="px-4 py-3 text-ink-700">{row.bestScene}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <section class="mt-12" aria-labelledby="how-to-choose">
+      <h2 id="how-to-choose" class="font-display text-2xl font-bold text-ink-950">怎么选？</h2>
+      <ol class="mt-4 list-decimal space-y-2 pl-5 text-ink-700">
+        <li>日常对话、多模态与生态插件：优先 ChatGPT</li>
+        <li>长文档精读、严谨改写、代码审查：优先 Claude</li>
+        <li>资料调研、Google 文档/表格协作：优先 Gemini</li>
+        <li>公开热点与开放讨论：可补充使用 Grok</li>
+        <li>重要结论务必人工复核，敏感信息不要上传公共对话产品</li>
+      </ol>
+      <p class="mt-4">
+        <a href="/guides/chatgpt-vs-claude-vs-gemini/" class="font-semibold text-brand-600 hover:underline">
+          阅读完整选型指南 →
+        </a>
+      </p>
+    </section>
+
+    <section class="mt-12" aria-labelledby="hub-links">
+      <h2 id="hub-links" class="font-display text-2xl font-bold text-ink-950">进入模型专栏</h2>
+      <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          modelHubs.map((hub) => (
+            <a
+              href={hub.href}
+              class="rounded-xl border border-ink-200 bg-white p-5 transition hover:border-brand-300"
+            >
+              <span class="font-display text-lg font-bold text-ink-950">{hub.name}</span>
+              <p class="mt-2 text-sm text-ink-600">{hub.tagline}</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

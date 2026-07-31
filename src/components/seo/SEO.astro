@@ -1,0 +1,72 @@
+---
+/**
+ * 统一 SEO meta 标签
+ */
+import { siteConfig } from '@config/site';
+import OpenGraph from './OpenGraph.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  tags?: string[];
+}
+
+const {
+  title,
+  description = siteConfig.description,
+  canonical,
+  image = siteConfig.defaultOgImage,
+  type = 'website',
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+  author,
+  tags = [],
+} = Astro.props;
+
+const pageTitle = title
+  ? title.includes(siteConfig.name)
+    ? title
+    : `${title} | ${siteConfig.name}`
+  : siteConfig.title;
+
+const canonicalURL = canonical
+  ? new URL(canonical, siteConfig.url).toString()
+  : new URL(Astro.url.pathname, siteConfig.url).toString();
+
+const imageURL = image.startsWith('http')
+  ? image
+  : new URL(image, siteConfig.url).toString();
+
+// 控制 title / description 长度提示（构建期不强制截断，保持语义完整）
+const safeTitle = pageTitle.length > 60 ? pageTitle.slice(0, 57) + '...' : pageTitle;
+const safeDescription =
+  description.length > 160 ? description.slice(0, 157) + '...' : description;
+---
+
+<title>{safeTitle}</title>
+<meta name="description" content={safeDescription} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="author" content={author ?? siteConfig.author} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+<meta name="language" content={siteConfig.language} />
+<link rel="alternate" hreflang={siteConfig.language} href={canonicalURL} />
+
+<OpenGraph
+  title={safeTitle}
+  description={safeDescription}
+  url={canonicalURL}
+  image={imageURL}
+  type={type}
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  author={author}
+  tags={tags}
+/>
