@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ChatGPT??">
   <rect width="64" height="64" rx="16" fill="#006fc7"/>
+
+  <!-- flat 6-fold kaleidoscope ring -->
   <g transform="translate(32 32)" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <path d="M0-16 L14-8 L14 8 L0 16 L-14 8 L-14-8 Z"/>
     <path d="M0-16 L0 16"/>

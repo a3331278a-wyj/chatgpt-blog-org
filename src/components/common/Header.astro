@@ -3,6 +3,7 @@
  * 站点顶部导航
  */
 import { navLinks, siteConfig } from '@config/site';
+import Logo from './Logo.astro';
 
 const pathname = Astro.url.pathname;
 
@@ -16,12 +17,7 @@ function isActive(href: string): boolean {
   <div class="container-site">
     <div class="flex h-16 items-center justify-between gap-4">
       <a href="/" class="group flex items-center gap-2.5" aria-label={`${siteConfig.name} 首页`}>
-        <span
-          class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white shadow-sm transition group-hover:bg-brand-700"
-          aria-hidden="true"
-        >
-          AI
-        </span>
+        <Logo size={36} />
         <span class="font-display text-lg font-bold tracking-tight text-ink-950">
           {siteConfig.name}
         </span>
