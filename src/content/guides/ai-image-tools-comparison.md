@@ -15,6 +15,9 @@ AI 绘图没有唯一冠军。选工具时看三件事：**出图风格、可控
 
 ## 对比总览
 
+想先看对话式出图，可从 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 开始。
+
+
 | 维度 | ChatGPT 图像 / DALL·E | Midjourney | Stable Diffusion |
 | --- | --- | --- | --- |
 | 上手难度 | 低（对话即可） | 中 | 中高 |
@@ -49,3 +52,7 @@ AI 绘图没有唯一冠军。选工具时看三件事：**出图风格、可控
 - [工具：Midjourney](/tools/midjourney/)
 - [工具：DALL·E](/tools/dalle/)
 - [AI 工具总览](/tools/)
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)

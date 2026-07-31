@@ -21,6 +21,8 @@ Cursor 是以 AI 为核心的代码编辑器。和「只会补全一行」的工
 
 ## 上手路径
 
+写提示词时可先在 [ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 或 [Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/) 里打磨需求描述，再贴回 Cursor。
+
 1. 从官网安装并打开本地项目  
 2. 先用 Chat/Agent 询问：「这个目录的职责是什么？」  
 3. 用明确约束提出改动：「只改认证相关文件，不要动数据库迁移」  
@@ -51,6 +53,11 @@ Cursor 是以 AI 为核心的代码编辑器。和「只会补全一行」的工
 - AI 可能引入隐蔽回归，关键路径必须人工看 diff  
 - 不要把生产密钥放进对话  
 - 大型重构拆成多次，比一次「全面现代化」更安全  
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
 
 ## 相关阅读
 

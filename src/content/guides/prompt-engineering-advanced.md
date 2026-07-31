@@ -16,6 +16,8 @@ coverAlt: '提示词工程进阶：让大模型稳定输出高质量结果 封�
 
 ## 先建立正确预期
 
+同一提示词建议在 [ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)、[Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)、[Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/) 各测一轮，记录稳定性。
+
 大模型不是搜索引擎，也不是绝对真理来源。它擅长：
 
 - 改写、总结、结构化整理
@@ -122,3 +124,9 @@ coverAlt: '提示词工程进阶：让大模型稳定输出高质量结果 封�
 ## 小结
 
 提示词工程的本质不是背模板，而是把模糊意图变成可执行规格。掌握 R-T-C-F、Few-shot、思维链与结构化输出后，你就能在不同模型上稳定拿到可用结果。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)

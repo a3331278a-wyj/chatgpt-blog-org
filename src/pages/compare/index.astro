@@ -4,13 +4,16 @@
  */
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/common/Breadcrumb.astro';
+import ProductCta from '@components/blog/ProductCta.astro';
 import { siteConfig, modelComparison, modelHubs } from '@config/site';
 import { buildBreadcrumbSchema } from '@utils/schema';
+import { getProducts } from '@utils/products';
 
 const schema = buildBreadcrumbSchema([
   { name: '首页', url: siteConfig.url },
   { name: '模型评测', url: `${siteConfig.url}/compare/` },
 ]);
+const products = getProducts(['chatgpt', 'claude', 'gemini', 'grok']);
 ---
 
 <BaseLayout
@@ -30,6 +33,14 @@ const schema = buildBreadcrumbSchema([
         没有绝对最强的模型，只有更适合当前任务的选择。下表按常见场景给出对照，详细教程见各模型专栏。
       </p>
     </header>
+
+    <div class="mt-8">
+      <ProductCta
+        products={products}
+        title="先体验再对比"
+        description="同一任务分别打开不同模型跑一遍，结论会比只看参数更可靠。"
+      />
+    </div>
 
     <div class="mt-10 overflow-x-auto rounded-xl border border-ink-200 bg-white shadow-sm">
       <table class="min-w-full text-left text-sm">
@@ -87,13 +98,22 @@ const schema = buildBreadcrumbSchema([
       <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {
           modelHubs.map((hub) => (
-            <a
-              href={hub.href}
-              class="rounded-xl border border-ink-200 bg-white p-5 transition hover:border-brand-300"
-            >
-              <span class="font-display text-lg font-bold text-ink-950">{hub.name}</span>
-              <p class="mt-2 text-sm text-ink-600">{hub.tagline}</p>
-            </a>
+            <article class="rounded-xl border border-ink-200 bg-white p-5 transition hover:border-brand-300">
+              <a href={hub.href} class="block">
+                <span class="font-display text-lg font-bold text-ink-950">{hub.name}</span>
+                <p class="mt-2 text-sm text-ink-600">{hub.tagline}</p>
+              </a>
+              {'productUrl' in hub && hub.productUrl ? (
+                <a
+                  href={hub.productUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-4 inline-flex text-sm font-semibold text-brand-600 hover:text-brand-700"
+                >
+                  立即体验 →
+                </a>
+              ) : null}
+            </article>
           ))
         }
       </div>

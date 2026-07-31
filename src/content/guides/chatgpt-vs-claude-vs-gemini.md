@@ -16,6 +16,9 @@ coverAlt: 'ChatGPT vs Claude vs Gemini：2026 怎么选 封面'
 
 ## 快速结论
 
+选定方向后直接体验：[ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) · [Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/) · [Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)。
+
+
 | 你的主要需求 | 更优先 |
 | --- | --- |
 | 综合日常 + 多模态 + 生态 | ChatGPT |
@@ -68,6 +71,12 @@ coverAlt: 'ChatGPT vs Claude vs Gemini：2026 怎么选 封面'
 - 固定 3 个真实任务做盲测
 - 记录耗时、返工次数、可用性
 - 每季度复测一次，而不是天天换模型
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)
 
 ## 延伸阅读
 

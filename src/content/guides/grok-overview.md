@@ -15,6 +15,9 @@ Grok 是 xAI 推出的对话助手，市场讨论里常强调其**实时信息�
 
 ## 更适合
 
+想感受风格差异，可打开 [Grok 使用入口](https://babawuai.com/products/ai-chat/grok-4-5/)；需要严谨长文时再切到 Claude / ChatGPT。
+
+
 - 跟踪公开热点与舆论讨论  
 - 开放式头脑风暴  
 - 需要更口语、更直接的对话体验时  
@@ -34,3 +37,10 @@ Grok 是 xAI 推出的对话助手，市场讨论里常强调其**实时信息�
 | 多模态与综合任务 | ChatGPT |
 
 具体能力、套餐与可用性以官方最新信息为准。更多对比见 [模型评测](/compare/)。
+
+## 使用入口
+
+- [立即体验 Grok](https://babawuai.com/products/ai-chat/grok-4-5/)
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)

@@ -25,6 +25,8 @@ coverAlt: 'Claude vs ChatGPT 深度对比：写作与代码场景怎么选 封�
 
 ## 写作场景怎么测
 
+建议同一任务分别在 [Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/) 与 [ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 各跑一遍，对比返工成本。
+
 用同一篇 3000 字材料，分别要求：
 
 1. 200 字摘要  
@@ -50,3 +52,8 @@ coverAlt: 'Claude vs ChatGPT 深度对比：写作与代码场景怎么选 封�
 3. 人工：事实与合规终审  
 
 延伸阅读：[三模型选型](/guides/chatgpt-vs-claude-vs-gemini/)、[Claude 入门](/guides/claude-beginner-guide/)。
+
+## 使用入口
+
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)

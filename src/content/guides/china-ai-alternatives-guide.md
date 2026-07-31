@@ -24,6 +24,9 @@ howToSteps:
 
 ## 先选场景，再选产品
 
+若你仍想对比海外模型体验，可从 [ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)、[Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)、[Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)、[Grok](https://babawuai.com/products/ai-chat/grok-4-5/) 入口尝试。
+
+
 | 场景 | 可优先考虑的方向 |
 | --- | --- |
 | 中文写作 / 润色 | 通义千问、Kimi、豆包、文心一言等 |
@@ -53,3 +56,10 @@ howToSteps:
 - [ChatGPT 国内使用指南](/guides/chatgpt-china-usage-guide-2026/)
 - [访问与使用说明](/access/)
 - [三模型选型](/guides/chatgpt-vs-claude-vs-gemini/)
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)
+- [立即体验 Grok](https://babawuai.com/products/ai-chat/grok-4-5/)

@@ -21,6 +21,8 @@ Gemini 是 Google 的大模型产品线，优势常体现在：**多模态理解
 
 ## 快速上手
 
+打开 [Gemini 使用入口](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)，先用一个真实学习问题完成首轮对话。
+
 1. 使用 Google 账号登录 Gemini  
 2. 先完成一个「真实任务」，例如：把会议草稿整理成待办  
 3. 明确输出格式，减少返工
@@ -55,6 +57,10 @@ Gemini 是 Google 的大模型产品线，优势常体现在：**多模态理解
 | 找资料与线索 | Gemini |
 | 长文结构化与润色 | Claude |
 | 多版本创意与多模态生成 | ChatGPT |
+
+## 使用入口
+
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)
 
 ## 相关阅读
 

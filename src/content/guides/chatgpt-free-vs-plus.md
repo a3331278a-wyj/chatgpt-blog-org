@@ -15,6 +15,8 @@ coverAlt: 'ChatGPT 免费版 vs Plus：2026 怎么选更划算 封面'
 
 ## 一句话结论
 
+不确定要不要付费？先用 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 体验免费能力，再决定是否升级。
+
 - **偶尔用、学习体验**：免费版通常够用
 - **每周多次深度使用（写作/编程/分析）**：Plus 更容易回本
 - **团队或要稳定 API**：优先看官方 API / 企业方案，而不是个人 Plus
@@ -52,6 +54,10 @@ coverAlt: 'ChatGPT 免费版 vs Plus：2026 怎么选更划算 封面'
 2. 按月订阅，不合适立刻取消
 3. 把高频模板沉淀下来，减少无效重试
 4. 开发场景把用量迁到 API，便于计量
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
 
 ## 相关阅读
 

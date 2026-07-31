@@ -16,6 +16,8 @@ import {
   type GuideEntry,
 } from '@utils/guides';
 import { buildArticleSchema, buildBreadcrumbSchema, buildHowToSchema } from '@utils/schema';
+import { getProductsForGuide } from '@utils/products';
+import ProductCta from '@components/blog/ProductCta.astro';
 
 export async function getStaticPaths() {
   const guides = await getPublishedGuides();
@@ -36,6 +38,7 @@ const allGuides = await getPublishedGuides();
 const related = getRelatedGuides(guide, allGuides, 3);
 const { prev, next } = getAdjacentGuides(guide, allGuides);
 const readingMinutes = estimateReadingMinutes(guide.body ?? guide.data.description);
+const products = getProductsForGuide(guide.id, guide.data.model);
 
 const pageUrl = `${siteConfig.url}/guides/${guide.id}/`;
 const ogImage = guide.data.cover ?? siteConfig.defaultOgImage;
@@ -55,6 +58,13 @@ const schema = [
     ? [buildHowToSchema(guide, pageUrl, guide.data.howToSteps)]
     : []),
 ];
+
+const ctaTitle =
+  products.length === 1 ? `边学边用：体验 ${products[0].name}` : '边学边用：打开对应模型';
+const ctaDescription =
+  products.length === 1
+    ? `读完本节可直接打开 ${products[0].name} 动手练习。`
+    : '按文章提到的模型分别进入体验，边对比边练习效果更好。';
 ---
 
 <GuideLayout
@@ -69,6 +79,7 @@ const schema = [
   tags={guide.data.tags}
   schema={schema}
   headings={headings}
+  products={products}
   breadcrumbs={[
     { label: '首页', href: '/' },
     { label: '教程指南', href: '/guides/' },
@@ -121,7 +132,7 @@ const schema = [
 
   {
     guide.data.cover && (
-      <figure class="mb-10 overflow-hidden rounded-xl bg-ink-100">
+      <figure class="mb-8 overflow-hidden rounded-xl bg-ink-100">
         <img
           src={guide.data.cover}
           alt={guide.data.coverAlt ?? guide.data.title}
@@ -135,8 +146,20 @@ const schema = [
     )
   }
 
+  <div class="mb-10">
+    <ProductCta products={products} title={ctaTitle} description={ctaDescription} />
+  </div>
+
   <div class="prose-blog">
     <Content />
+  </div>
+
+  <div class="mt-10">
+    <ProductCta
+      products={products}
+      title="读完了？直接上手试试"
+      description="把文中的方法立刻用到对话里，比只收藏更有效。"
+    />
   </div>
 
   <nav

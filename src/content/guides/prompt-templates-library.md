@@ -15,6 +15,9 @@ coverAlt: '提示词模板库：写作、编程、学习可直接套用 封面'
 
 ## 使用方法
 
+复制模板后，可分别在 [ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)、[Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)、[Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/) 中试跑同一任务。
+
+
 1. 复制模板  
 2. 替换 `{花括号}` 中的内容  
 3. 先要大纲/结构，再扩写细节  
@@ -108,3 +111,9 @@ coverAlt: '提示词模板库：写作、编程、学习可直接套用 封面'
 - 需要结构化数据时，明确要求 JSON 字段  
 
 更多原理见：[提示词工程进阶](/guides/prompt-engineering-advanced/)。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)

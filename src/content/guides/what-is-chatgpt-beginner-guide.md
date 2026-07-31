@@ -39,6 +39,9 @@ ChatGPT 是 OpenAI 推出的对话式 AI 产品。你可以把它理解成：**�
 
 ## 10 分钟上手流程
 
+读到这里就可以边练边学了：打开 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)，按下面步骤完成第一轮对话。
+
+
 ### 1. 打开产品并进入对话
 
 通过官方入口登录后，你会看到输入框。第一次不必追求完美提示词，先完成一轮完整对话。
@@ -77,6 +80,10 @@ ChatGPT 是 OpenAI 推出的对话式 AI 产品。你可以把它理解成：**�
 ## 和 Claude、Gemini 的关系
 
 ChatGPT 不是唯一选择。长文档可看 Claude，Google 生态协作可看 Gemini。若你还在起步期，先把 ChatGPT 的提问方法练熟，再按场景扩展。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
 
 ## 相关阅读
 

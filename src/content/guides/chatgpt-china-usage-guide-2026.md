@@ -33,6 +33,9 @@ OpenAI 的 ChatGPT 服务对部分地区存在访问与注册限制，且政策�
 
 ## 三条合规路径（按推荐顺序）
 
+如果你已有可用方式，也可以先从这些入口体验：[ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)、[Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)、[Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)。
+
+
 ### 路径 A：官方产品（适合可合规访问的用户）
 
 1. 确认你所在地区是否在官方支持范围内
@@ -85,3 +88,9 @@ OpenAI 的 ChatGPT 服务对部分地区存在访问与注册限制，且政策�
 - [ChatGPT vs Claude vs Gemini 怎么选](/guides/chatgpt-vs-claude-vs-gemini/)
 
 > 声明：本站是独立教程博客，与 OpenAI 无关联。以上信息仅供学习参考，请以官方最新政策为准。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)

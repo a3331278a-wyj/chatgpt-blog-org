@@ -11,7 +11,7 @@ cover: '/images/covers/chatgpt.svg'
 coverAlt: 'ChatGPT 常见访问问题与报错排查 封面'
 ---
 
-遇到「打不开 / 登不上 / 一直转圈」时，先别急着换一堆来路不明的网站。按下面顺序排查，通常能定位到问题。
+遇到「打不开 / 登不上 / 一直转圈」时，先别急着换一堆来路不明的网站。按下面顺序排查，通常能定位到问题。页面可访问时，也可从 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 重新登录验证。
 
 ## 1. 页面无法打开或超时
 
@@ -61,3 +61,7 @@ coverAlt: 'ChatGPT 常见访问问题与报错排查 封面'
 - 详见[国内使用指南](/guides/chatgpt-china-usage-guide-2026/)与[隐私政策](/privacy/)  
 
 若仍无法解决，欢迎通过关于页邮箱反馈具体报错截图（请打码隐私信息）。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)

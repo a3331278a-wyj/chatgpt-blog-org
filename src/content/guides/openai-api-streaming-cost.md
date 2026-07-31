@@ -15,6 +15,8 @@ coverAlt: 'OpenAI API 进阶：流式输出与成本控制 封面'
 
 ## 流式输出最小示例
 
+调试提示词时，可先在 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 验证输出质量，再落到 API。
+
 ```ts
 import OpenAI from 'openai';
 
@@ -73,3 +75,7 @@ async function withRetry<T>(fn: () => Promise<T>, times = 3): Promise<T> {
 - 对用户输入做基础注入与敏感信息过滤  
 
 入门请先看：[OpenAI API 入门实战](/guides/openai-api-nodejs-guide/)。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)

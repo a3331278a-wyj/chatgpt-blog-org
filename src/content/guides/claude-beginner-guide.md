@@ -23,6 +23,9 @@ Claude 是 Anthropic 推出的大模型助手，中文用户常把它用在：**
 
 ## 5 分钟开始
 
+直接打开 [Claude 使用入口](https://babawuai.com/products/ai-chat/claude-opus-4-8/)，用下面的首问模板开始第一轮。
+
+
 1. 打开 Claude 官方产品并完成登录  
 2. 上传或粘贴一段你真正在处理的材料  
 3. 明确要求「先摘要，再给问题清单，再给改写」
@@ -58,6 +61,10 @@ Claude 是 Anthropic 推出的大模型助手，中文用户常把它用在：**
 - 同样不要上传高度敏感的个人信息与未公开商业机密
 - 输出仍需人工确认，尤其是法律与合规相关内容
 - 具体模型名称与额度以官网为准
+
+## 使用入口
+
+- [立即体验 Claude](https://babawuai.com/products/ai-chat/claude-opus-4-8/)
 
 ## 相关阅读
 

@@ -34,6 +34,8 @@ ChatGPT 已经成为全球最受欢迎的 AI 对话产品之一。本文将带�
 
 ## 注册前的准备
 
+准备就绪后，可直接前往 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 开始注册。
+
 1. 准备一个常用邮箱（Gmail、Outlook 等均可）
 2. 确认设备浏览器为最新版 Chrome / Edge / Firefox
 3. 了解你所在地区的网络与服务可用性要求
@@ -98,6 +100,10 @@ ChatGPT 已经成为全球最受欢迎的 AI 对话产品之一。本文将带�
 ### 回答质量不稳定
 
 把任务拆小、补充上下文，并明确「不要编造不确定的事实」。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)
 
 ## 下一步学习建议
 

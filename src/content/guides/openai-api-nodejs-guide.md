@@ -11,7 +11,7 @@ cover: '/images/covers/api.svg'
 coverAlt: 'OpenAI API 入门实战：用 Node.js 调用 Chat Completions 封面'
 ---
 
-如果你已经会用 ChatGPT 网页版，下一步很自然就是通过 API 把大模型能力接到自己的产品里。本文以 Node.js 为例，演示最小可用接入流程。
+如果你已经会用 ChatGPT 网页版，下一步很自然就是通过 API 把大模型能力接到自己的产品里。本文以 Node.js 为例，演示最小可用接入流程。对话效果可先在 [ChatGPT 使用入口](https://babawuai.com/products/ai-chat/gpt-5-6-sol/) 验证提示词，再落到 API。
 
 ## 你将学到什么
 
@@ -117,3 +117,7 @@ try {
 - 结合向量检索实现简易 RAG 知识库问答
 
 当你完成第一次成功调用后，真正的产品工作才刚开始：权限、稳定性、成本与评估体系，会决定 API 能否长期跑在业务里。
+
+## 使用入口
+
+- [立即体验 ChatGPT](https://babawuai.com/products/ai-chat/gpt-5-6-sol/)

@@ -5,7 +5,9 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '@components/common/Breadcrumb.astro';
 import TOC from '@components/blog/TOC.astro';
+import ProductCta from '@components/blog/ProductCta.astro';
 import type { MarkdownHeading } from 'astro';
+import type { ProductLink } from '@utils/products';
 
 export interface Props {
   title: string;
@@ -20,6 +22,7 @@ export interface Props {
   schema?: Record<string, unknown> | Record<string, unknown>[];
   breadcrumbs?: { label: string; href?: string }[];
   headings?: MarkdownHeading[];
+  products?: ProductLink[];
 }
 
 const {
@@ -35,7 +38,10 @@ const {
   schema,
   breadcrumbs = [],
   headings = [],
+  products = [],
 } = Astro.props;
+
+const showAside = headings.length > 0 || products.length > 0;
 ---
 
 <BaseLayout
@@ -56,14 +62,22 @@ const {
         <Breadcrumb items={breadcrumbs} />
       </div>
     )}
-    <div class="grid gap-10 xl:grid-cols-[1fr_240px]">
+    <div class:list={['grid gap-10', showAside && 'xl:grid-cols-[1fr_240px]']}>
       <article class="min-w-0">
         <slot />
       </article>
-      {headings.length > 0 && (
+      {showAside && (
         <aside class="hidden xl:block">
-          <div class="sticky top-24">
-            <TOC headings={headings} />
+          <div class="sticky top-24 space-y-5">
+            {headings.length > 0 && <TOC headings={headings} />}
+            {products.length > 0 && (
+              <ProductCta
+                products={products}
+                compact
+                title="使用入口"
+                description=""
+              />
+            )}
           </div>
         </aside>
       )}

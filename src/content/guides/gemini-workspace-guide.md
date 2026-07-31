@@ -15,6 +15,9 @@ Gemini 的差异化，很多时候体现在 **Google 办公链路**：你已经�
 
 ## 典型工作流
 
+可先在 [Gemini 使用入口](https://babawuai.com/products/ai-chat/gemini-3-5-flash/) 试用文档总结与表格整理能力。
+
+
 ### 1. 会议记录 → 待办
 
 ```text
@@ -40,6 +43,10 @@ Gemini 的差异化，很多时候体现在 **Google 办公链路**：你已经�
 - 需要极强长文结构控制：转 Claude  
 - 需要图像生成/更丰富插件生态：转 ChatGPT  
 - 涉及敏感商业数据：评估企业合规方案，避免随意粘贴到消费级对话产品  
+
+## 使用入口
+
+- [立即体验 Gemini](https://babawuai.com/products/ai-chat/gemini-3-5-flash/)
 
 ## 相关阅读
 
