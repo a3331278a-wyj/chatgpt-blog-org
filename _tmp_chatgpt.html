@@ -1,0 +1,2065 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.1.6"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="ChatGPTåå®¢ RSS" href="/rss.xml"><title>ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ãä½¿ç¨åºæ¯ä¸å¥é¨æå | ChatGPTåå®¢</title><meta name="description" content="ç³»ç»ä»ç» ChatGPTï¼å®æ¯ä»ä¹ãæ ¸å¿åè½ãåä½/ç¼ç¨/å­¦ä¹ ç­åºæ¯ãéåè°ãå¦ä½å¼å§ä½¿ç¨ï¼å¹¶è§£ç­å¸¸è§é®é¢ãç¬¬ä¸æ¹æç¨ç«ï¼ä¸ OpenAI æ å³èã"><link rel="canonical" href="https://chatgpt-blog.org/guides/chatgpt/"><meta name="author" content="ChatGPTåå®¢ç¼è¾é¨"><meta name="robots" content="index, follow"><meta name="language" content="zh-CN"><link rel="alternate" hreflang="zh-CN" href="https://chatgpt-blog.org/guides/chatgpt/"><!-- Open Graph --><meta property="og:site_name" content="ChatGPTåå®¢"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website"><meta property="og:title" content="ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ãä½¿ç¨åºæ¯ä¸å¥é¨æå | ChatGPTåå®¢"><meta property="og:description" content="ç³»ç»ä»ç» ChatGPTï¼å®æ¯ä»ä¹ãæ ¸å¿åè½ãåä½/ç¼ç¨/å­¦ä¹ ç­åºæ¯ãéåè°ãå¦ä½å¼å§ä½¿ç¨ï¼å¹¶è§£ç­å¸¸è§é®é¢ãç¬¬ä¸æ¹æç¨ç«ï¼ä¸ OpenAI æ å³èã"><meta property="og:url" content="https://chatgpt-blog.org/guides/chatgpt/"><meta property="og:image" content="https://chatgpt-blog.org/images/covers/chatgpt.svg"><meta property="og:image:alt" content="ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ãä½¿ç¨åºæ¯ä¸å¥é¨æå | ChatGPTåå®¢"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@chatgptblogorg"><meta name="twitter:title" content="ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ãä½¿ç¨åºæ¯ä¸å¥é¨æå | ChatGPTåå®¢"><meta name="twitter:description" content="ç³»ç»ä»ç» ChatGPTï¼å®æ¯ä»ä¹ãæ ¸å¿åè½ãåä½/ç¼ç¨/å­¦ä¹ ç­åºæ¯ãéåè°ãå¦ä½å¼å§ä½¿ç¨ï¼å¹¶è§£ç­å¸¸è§é®é¢ãç¬¬ä¸æ¹æç¨ç«ï¼ä¸ OpenAI æ å³èã"><meta name="twitter:image" content="https://chatgpt-blog.org/images/covers/chatgpt.svg"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"é¦é¡µ","item":"https://chatgpt-blog.org"},{"@type":"ListItem","position":2,"name":"æç¨æå","item":"https://chatgpt-blog.org/guides/"},{"@type":"ListItem","position":3,"name":"ChatGPT ä»ç»","item":"https://chatgpt-blog.org/guides/chatgpt/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ChatGPT æ¯ä»ä¹ï¼","acceptedAnswer":{"@type":"Answer","text":"ChatGPT æ¯ OpenAI æ¨åºçå¯¹è¯å¼ AI å©æï¼å¯ä»¥éè¿æå­ï¼åé¨åå¤æ¨¡æè½åï¼å®æåä½ãå­¦ä¹ ãç¼ç¨è¾å©ãç¿»è¯ä¸å¤´èé£æ´ç­ä»»å¡ãå®ä¸æ¯æç´¢å¼æï¼è¾åºéè¦äººå·¥æ ¸å¯¹ã"}},{"@type":"Question","name":"ChatGPT æä¹å¼å§ç¨ï¼","acceptedAnswer":{"@type":"Answer","text":"åéè¿å¯ç¨çäº§åå¥å£è¿å¥å¯¹è¯çé¢ï¼ç¨è§è²+ä»»å¡+çº¦æçæ¹å¼æé®ãæ°æå¯éè¯»æ¬ç«ãChatGPT æ¯ä»ä¹ï¼æ°æ 10 åéä¸æãä¸ãæ³¨åä¸å¥é¨ãæç¨ï¼è¾¹å­¦è¾¹ç»ã"}},{"@type":"Question","name":"ChatGPT åè´¹çå¤ç¨åï¼","acceptedAnswer":{"@type":"Answer","text":"è½»åº¦å­¦ä¹ ãä½éªä¸å¶å°åä½ï¼åè´¹çéå¸¸å¤ç¨ï¼é«é¢æ·±åº¦ä½¿ç¨åèèè®¢éãè¯¦è§ãChatGPT åè´¹ç vs Plusãå¯¹æ¯æã"}},{"@type":"Question","name":"å½åç¨æ·å¦ä½äºè§£ä¸ä½¿ç¨ ChatGPTï¼","acceptedAnswer":{"@type":"Answer","text":"è¯·ä¼åéè¯»ãChatGPT å½åä½¿ç¨å®æ´æåãä¸ãè®¿é®ä¸ä½¿ç¨è¯´æãï¼äºè§£åè§è·¯å¾ãå®æ¹æ¿ç­ä¸æ¿ä»£æ¹æ¡ãæ¬ç«ä¸æä¾è¿è§è®¿é®æ¹å¼ã"}},{"@type":"Question","name":"ææ ·è®© ChatGPT åç­æ´åç¡®ï¼","acceptedAnswer":{"@type":"Answer","text":"è¡¥åèæ¯ãæç¡®è¾åºæ ¼å¼ãç»åºç¤ºä¾ï¼å¹¶å¯¹äºå®ç±»ç»è®ºè¦æ±ãä¸ç¡®å®è¯·æ æããå¤æä»»å¡ææå¤§çº²âåæ®µâæ ¡å¯¹ã"}},{"@type":"Question","name":"æ¬ç«ä¸ ChatGPT / OpenAI æå³ç³»åï¼","acceptedAnswer":{"@type":"Answer","text":"æ²¡æãæ¬ç«æ¯ç¬ç«ç¬¬ä¸æ¹æç¨ä¸èµè®¯åå®¢ï¼ä¸ OpenAI æ å³èæææå³ç³»ãåæ å½åèªææèææã"}}]},{"@context":"https://schema.org","@type":"WebPage","name":"ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ãä½¿ç¨åºæ¯ä¸å¥é¨æå","description":"ç³»ç»ä»ç» ChatGPTï¼å®æ¯ä»ä¹ãæ ¸å¿åè½ãåä½/ç¼ç¨/å­¦ä¹ ç­åºæ¯ãéåè°ãå¦ä½å¼å§ä½¿ç¨ï¼å¹¶è§£ç­å¸¸è§é®é¢ãç¬¬ä¸æ¹æç¨ç«ï¼ä¸ OpenAI æ å³èã","url":"https://chatgpt-blog.org/guides/chatgpt/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"ChatGPTåå®¢","url":"https://chatgpt-blog.org"},"about":{"@type":"SoftwareApplication","name":"ChatGPT","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"OpenAI"}},"primaryImageOfPage":{"@type":"ImageObject","url":"https://chatgpt-blog.org/images/covers/chatgpt.svg"}}]</script><style data-vite-dev-id="C:/aiseoproject/chatgpt-blog-org/src/styles/global.css">
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap");
+@layer properties;
+@layer theme, base, components, utilities;
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer theme {
+  :root, :host {
+    --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-lg: 32rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --tracking-tight: -0.025em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --leading-snug: 1.375;
+    --leading-relaxed: 1.625;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --blur-md: 12px;
+    --aspect-video: 16 / 9;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-brand-50: #f0f7ff;
+    --color-brand-100: #e0effe;
+    --color-brand-200: #b9dffd;
+    --color-brand-300: #7cc5fc;
+    --color-brand-400: #36a7f8;
+    --color-brand-500: #0c8ce9;
+    --color-brand-600: #006fc7;
+    --color-brand-700: #0158a1;
+    --color-brand-950: #072849;
+    --color-ink-50: #f6f7f9;
+    --color-ink-100: #eceef2;
+    --color-ink-200: #d5dae3;
+    --color-ink-300: #b0bac9;
+    --color-ink-400: #8594ab;
+    --color-ink-500: #667791;
+    --color-ink-600: #515f78;
+    --color-ink-700: #434d61;
+    --color-ink-800: #3a4252;
+    --color-ink-900: #343946;
+    --color-ink-950: #22262f;
+    --font-display: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --max-width-content: 72rem;
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .top-24 {
+    top: calc(var(--spacing) * 24);
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-1\.5 {
+    margin-top: calc(var(--spacing) * 1.5);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
+  .mt-auto {
+    margin-top: auto;
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-14 {
+    margin-bottom: calc(var(--spacing) * 14);
+  }
+  .ml-1 {
+    margin-left: var(--spacing);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .aspect-video {
+    aspect-ratio: var(--aspect-video);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-\[60vh\] {
+    min-height: 60vh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .min-w-0 {
+    min-width: 0px;
+  }
+  .min-w-full {
+    min-width: 100%;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-not-allowed {
+    cursor: not-allowed;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .list-decimal {
+    list-style-type: decimal;
+  }
+  .list-none {
+    list-style-type: none;
+  }
+  .columns-1 {
+    columns: 1;
+  }
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  :where(.space-y-1\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-2 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-6 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-14 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 14) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 14) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
+  .gap-x-5 {
+    column-gap: calc(var(--spacing) * 5);
+  }
+  .gap-x-8 {
+    column-gap: calc(var(--spacing) * 8);
+  }
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-y {
+    border-block-style: var(--tw-border-style);
+    border-block-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-dashed {
+    --tw-border-style: dashed;
+    border-style: dashed;
+  }
+  .border-amber-200 {
+    border-color: var(--color-amber-200);
+  }
+  .border-brand-200 {
+    border-color: var(--color-brand-200);
+  }
+  .border-ink-100 {
+    border-color: var(--color-ink-100);
+  }
+  .border-ink-200 {
+    border-color: var(--color-ink-200);
+  }
+  .border-ink-200\/80 {
+    border-color: color-mix(in srgb, #d5dae3 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-ink-200) 80%, transparent);
+    }
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
+  .bg-brand-50 {
+    background-color: var(--color-brand-50);
+  }
+  .bg-brand-50\/70 {
+    background-color: color-mix(in srgb, #f0f7ff 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-50) 70%, transparent);
+    }
+  }
+  .bg-brand-600 {
+    background-color: var(--color-brand-600);
+  }
+  .bg-ink-50 {
+    background-color: var(--color-ink-50);
+  }
+  .bg-ink-50\/40 {
+    background-color: color-mix(in srgb, #f6f7f9 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ink-50) 40%, transparent);
+    }
+  }
+  .bg-ink-50\/50 {
+    background-color: color-mix(in srgb, #f6f7f9 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ink-50) 50%, transparent);
+    }
+  }
+  .bg-ink-50\/60 {
+    background-color: color-mix(in srgb, #f6f7f9 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ink-50) 60%, transparent);
+    }
+  }
+  .bg-ink-100 {
+    background-color: var(--color-ink-100);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/90 {
+    background-color: color-mix(in srgb, #fff 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
+    }
+  }
+  .bg-gradient-to-br {
+    --tw-gradient-position: to bottom right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-hero {
+    background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(12, 140, 233, 0.18), transparent), linear-gradient(180deg, #f0f7ff 0%, #f6f7f9 55%, #f6f7f9 100%);
+  }
+  .from-brand-100 {
+    --tw-gradient-from: var(--color-brand-100);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-brand-200 {
+    --tw-gradient-to: var(--color-brand-200);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-14 {
+    padding-block: calc(var(--spacing) * 14);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .leading-snug {
+    --tw-leading: var(--leading-snug);
+    line-height: var(--leading-snug);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-amber-950 {
+    color: var(--color-amber-950);
+  }
+  .text-brand-600 {
+    color: var(--color-brand-600);
+  }
+  .text-brand-700 {
+    color: var(--color-brand-700);
+  }
+  .text-ink-300 {
+    color: var(--color-ink-300);
+  }
+  .text-ink-400 {
+    color: var(--color-ink-400);
+  }
+  .text-ink-500 {
+    color: var(--color-ink-500);
+  }
+  .text-ink-600 {
+    color: var(--color-ink-600);
+  }
+  .text-ink-700 {
+    color: var(--color-ink-700);
+  }
+  .text-ink-800 {
+    color: var(--color-ink-800);
+  }
+  .text-ink-900 {
+    color: var(--color-ink-900);
+  }
+  .text-ink-950 {
+    color: var(--color-ink-950);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .opacity-40 {
+    opacity: 40%;
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-1 {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-ink-100 {
+    --tw-ring-color: var(--color-ink-100);
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(var(--blur-md));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .group-open\:rotate-45:is(:where(.group):is([open], :popover-open, :open) *) {
+    rotate: 45deg;
+  }
+  .group-open\:bg-brand-50:is(:where(.group):is([open], :popover-open, :open) *) {
+    background-color: var(--color-brand-50);
+  }
+  .group-open\:text-brand-700:is(:where(.group):is([open], :popover-open, :open) *) {
+    color: var(--color-brand-700);
+  }
+  @media (hover: hover) {
+    .group-hover\:scale-\[1\.02\]:is(:where(.group):hover *) {
+      scale: 1.02;
+    }
+    .group-hover\:text-brand-700:is(:where(.group):hover *) {
+      color: var(--color-brand-700);
+    }
+    .group-hover\:opacity-90:is(:where(.group):hover *) {
+      opacity: 90%;
+    }
+  }
+  .marker\:content-none ::marker {
+    --tw-content: none;
+    content: none;
+  }
+  .marker\:content-none::marker {
+    --tw-content: none;
+    content: none;
+  }
+  .marker\:content-none ::-webkit-details-marker {
+    --tw-content: none;
+    content: none;
+  }
+  .marker\:content-none::-webkit-details-marker {
+    --tw-content: none;
+    content: none;
+  }
+  .placeholder\:text-ink-400::placeholder {
+    color: var(--color-ink-400);
+  }
+  .open\:shadow-sm:is([open], :popover-open, :open) {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  @media (hover: hover) {
+    .hover\:border-brand-300:hover {
+      border-color: var(--color-brand-300);
+    }
+    .hover\:bg-brand-50:hover {
+      background-color: var(--color-brand-50);
+    }
+    .hover\:bg-brand-50\/40:hover {
+      background-color: color-mix(in srgb, #f0f7ff 40%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-brand-50\/40:hover {
+        background-color: color-mix(in oklab, var(--color-brand-50) 40%, transparent);
+      }
+    }
+    .hover\:bg-brand-100:hover {
+      background-color: var(--color-brand-100);
+    }
+    .hover\:bg-brand-700:hover {
+      background-color: var(--color-brand-700);
+    }
+    .hover\:bg-ink-50:hover {
+      background-color: var(--color-ink-50);
+    }
+    .hover\:bg-ink-100:hover {
+      background-color: var(--color-ink-100);
+    }
+    .hover\:text-brand-600:hover {
+      color: var(--color-brand-600);
+    }
+    .hover\:text-brand-700:hover {
+      color: var(--color-brand-700);
+    }
+    .hover\:text-ink-900:hover {
+      color: var(--color-ink-900);
+    }
+    .hover\:underline:hover {
+      text-decoration-line: underline;
+    }
+    .hover\:shadow-md:hover {
+      --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:border-brand-400:focus {
+    border-color: var(--color-brand-400);
+  }
+  .focus\:ring-2:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .focus\:ring-brand-200:focus {
+    --tw-ring-color: var(--color-brand-200);
+  }
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  @media (width >= 40rem) {
+    .sm\:columns-2 {
+      columns: 2;
+    }
+    .sm\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .sm\:flex-row {
+      flex-direction: row;
+    }
+    .sm\:p-6 {
+      padding: calc(var(--spacing) * 6);
+    }
+    .sm\:p-8 {
+      padding: calc(var(--spacing) * 8);
+    }
+    .sm\:px-8 {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+    .sm\:py-18 {
+      padding-block: calc(var(--spacing) * 18);
+    }
+    .sm\:text-right {
+      text-align: right;
+    }
+    .sm\:text-3xl {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+    .sm\:text-4xl {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:flex {
+      display: flex;
+    }
+    .md\:hidden {
+      display: none;
+    }
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:sticky {
+      position: sticky;
+    }
+    .lg\:top-24 {
+      top: calc(var(--spacing) * 24);
+    }
+    .lg\:col-span-1 {
+      grid-column: span 1 / span 1;
+    }
+    .lg\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+    .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-\[1\.2fr_0\.8fr\] {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+    .lg\:grid-cols-\[1fr_280px\] {
+      grid-template-columns: 1fr 280px;
+    }
+    .lg\:self-start {
+      align-self: flex-start;
+    }
+    .lg\:py-10 {
+      padding-block: calc(var(--spacing) * 10);
+    }
+    .lg\:py-20 {
+      padding-block: calc(var(--spacing) * 20);
+    }
+    .lg\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:block {
+      display: block;
+    }
+    .xl\:grid-cols-\[1fr_240px\] {
+      grid-template-columns: 1fr 240px;
+    }
+  }
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-ink-50);
+    font-family: var(--font-sans);
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+    color: var(--color-ink-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  :focus-visible {
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px;
+    outline-offset: 2px;
+    outline-color: var(--color-brand-500);
+  }
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-brand-950);
+  }
+}
+@layer components {
+  .container-site {
+    margin-inline: auto;
+    width: 100%;
+    max-width: var(--max-width-content);
+    padding-inline: calc(var(--spacing) * 4);
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2);
+    border-radius: var(--radius-lg);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2.5);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-brand-600);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2.5);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-brand-700);
+      }
+    }
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2);
+    border-radius: var(--radius-lg);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-ink-200);
+    background-color: var(--color-white);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2.5);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-ink-800);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-brand-300);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-brand-50);
+      }
+    }
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-950);
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .section-desc {
+    margin-top: calc(var(--spacing) * 2);
+    max-width: var(--container-2xl);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    color: var(--color-ink-600);
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .card-hover {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -0.5);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .prose-blog {
+    color: var(--tw-prose-body);
+    max-width: 65ch;
+    :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+    }
+    :where([class~="lead"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-lead);
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+    :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-links);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-bold);
+      font-weight: 600;
+    }
+    :where(a strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(blockquote strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(thead th strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: decimal;
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      padding-inline-start: 1.625em;
+    }
+    :where(ol[type="A"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: upper-alpha;
+    }
+    :where(ol[type="a"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: lower-alpha;
+    }
+    :where(ol[type="A" s]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: upper-alpha;
+    }
+    :where(ol[type="a" s]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: lower-alpha;
+    }
+    :where(ol[type="I"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: upper-roman;
+    }
+    :where(ol[type="i"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: lower-roman;
+    }
+    :where(ol[type="I" s]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: upper-roman;
+    }
+    :where(ol[type="i" s]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: lower-roman;
+    }
+    :where(ol[type="1"]):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: decimal;
+    }
+    :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      list-style-type: disc;
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      padding-inline-start: 1.625em;
+    }
+    :where(ol > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
+      font-weight: 400;
+      color: var(--tw-prose-counters);
+    }
+    :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
+      color: var(--tw-prose-bullets);
+    }
+    :where(dt):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 600;
+      margin-top: 1.25em;
+    }
+    :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      border-color: var(--tw-prose-hr);
+      border-top-width: 1px;
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+    :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 500;
+      font-style: italic;
+      color: var(--tw-prose-quotes);
+      border-inline-start-width: 0.25rem;
+      border-inline-start-color: var(--tw-prose-quote-borders);
+      quotes: "\201C""\201D""\2018""\2019";
+      margin-top: 1.6em;
+      margin-bottom: 1.6em;
+      padding-inline-start: 1em;
+    }
+    :where(blockquote p:first-of-type):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+      content: open-quote;
+    }
+    :where(blockquote p:last-of-type):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+      content: close-quote;
+    }
+    :where(h1):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 800;
+      font-size: 2.25em;
+      margin-top: 0;
+      margin-bottom: 0.8888889em;
+      line-height: 1.1111111;
+    }
+    :where(h1 strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 900;
+      color: inherit;
+    }
+    :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      line-height: 1.3333333;
+    }
+    :where(h2 strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 800;
+      color: inherit;
+    }
+    :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 600;
+      font-size: 1.25em;
+      margin-top: 1.6em;
+      margin-bottom: 0.6em;
+      line-height: 1.6;
+    }
+    :where(h3 strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 700;
+      color: inherit;
+    }
+    :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 600;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.5;
+    }
+    :where(h4 strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 700;
+      color: inherit;
+    }
+    :where(img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    :where(picture):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      display: block;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    :where(video):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    :where(kbd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--tw-prose-kbd);
+      box-shadow: 0 0 0 1px var(--tw-prose-kbd-shadows), 0 3px 0 var(--tw-prose-kbd-shadows);
+      font-size: 0.875em;
+      border-radius: 0.3125rem;
+      padding-top: 0.1875em;
+      padding-inline-end: 0.375em;
+      padding-bottom: 0.1875em;
+      padding-inline-start: 0.375em;
+    }
+    :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-code);
+      font-weight: 600;
+      font-size: 0.875em;
+    }
+    :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+      content: "`";
+    }
+    :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+      content: "`";
+    }
+    :where(a code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(h1 code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(h2 code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+      font-size: 0.875em;
+    }
+    :where(h3 code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+      font-size: 0.9em;
+    }
+    :where(h4 code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(blockquote code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(thead th code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: inherit;
+    }
+    :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-pre-code);
+      background-color: var(--tw-prose-pre-bg);
+      overflow-x: auto;
+      font-weight: 400;
+      font-size: 0.875em;
+      line-height: 1.7142857;
+      margin-top: 1.7142857em;
+      margin-bottom: 1.7142857em;
+      border-radius: 0.375rem;
+      padding-top: 0.8571429em;
+      padding-inline-end: 1.1428571em;
+      padding-bottom: 0.8571429em;
+      padding-inline-start: 1.1428571em;
+    }
+    :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      background-color: transparent;
+      border-width: 0;
+      border-radius: 0;
+      padding: 0;
+      font-weight: inherit;
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      line-height: inherit;
+    }
+    :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+      content: none;
+    }
+    :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+      content: none;
+    }
+    :where(table):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      width: 100%;
+      table-layout: auto;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      font-size: 0.875em;
+      line-height: 1.7142857;
+    }
+    :where(thead):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      border-bottom-width: 1px;
+      border-bottom-color: var(--tw-prose-th-borders);
+    }
+    :where(thead th):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-headings);
+      font-weight: 600;
+      vertical-align: bottom;
+      padding-inline-end: 0.5714286em;
+      padding-bottom: 0.5714286em;
+      padding-inline-start: 0.5714286em;
+    }
+    :where(tbody tr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      border-bottom-width: 1px;
+      border-bottom-color: var(--tw-prose-td-borders);
+    }
+    :where(tbody tr:last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      border-bottom-width: 0;
+    }
+    :where(tbody td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      vertical-align: baseline;
+    }
+    :where(tfoot):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      border-top-width: 1px;
+      border-top-color: var(--tw-prose-th-borders);
+    }
+    :where(tfoot td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      vertical-align: top;
+    }
+    :where(th, td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      text-align: start;
+    }
+    :where(figure > *):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-captions);
+      font-size: 0.875em;
+      line-height: 1.4285714;
+      margin-top: 0.8571429em;
+    }
+    --tw-prose-body: oklch(37.3% 0.034 259.733);
+    --tw-prose-headings: oklch(21% 0.034 264.665);
+    --tw-prose-lead: oklch(44.6% 0.03 256.802);
+    --tw-prose-links: oklch(21% 0.034 264.665);
+    --tw-prose-bold: oklch(21% 0.034 264.665);
+    --tw-prose-counters: oklch(55.1% 0.027 264.364);
+    --tw-prose-bullets: oklch(87.2% 0.01 258.338);
+    --tw-prose-hr: oklch(92.8% 0.006 264.531);
+    --tw-prose-quotes: oklch(21% 0.034 264.665);
+    --tw-prose-quote-borders: oklch(92.8% 0.006 264.531);
+    --tw-prose-captions: oklch(55.1% 0.027 264.364);
+    --tw-prose-kbd: oklch(21% 0.034 264.665);
+    --tw-prose-kbd-shadows: color-mix(in oklab, oklch(21% 0.034 264.665) 10%, transparent);
+    --tw-prose-code: oklch(21% 0.034 264.665);
+    --tw-prose-pre-code: oklch(92.8% 0.006 264.531);
+    --tw-prose-pre-bg: oklch(27.8% 0.033 256.848);
+    --tw-prose-th-borders: oklch(87.2% 0.01 258.338);
+    --tw-prose-td-borders: oklch(92.8% 0.006 264.531);
+    --tw-prose-invert-body: oklch(87.2% 0.01 258.338);
+    --tw-prose-invert-headings: #fff;
+    --tw-prose-invert-lead: oklch(70.7% 0.022 261.325);
+    --tw-prose-invert-links: #fff;
+    --tw-prose-invert-bold: #fff;
+    --tw-prose-invert-counters: oklch(70.7% 0.022 261.325);
+    --tw-prose-invert-bullets: oklch(44.6% 0.03 256.802);
+    --tw-prose-invert-hr: oklch(37.3% 0.034 259.733);
+    --tw-prose-invert-quotes: oklch(96.7% 0.003 264.542);
+    --tw-prose-invert-quote-borders: oklch(37.3% 0.034 259.733);
+    --tw-prose-invert-captions: oklch(70.7% 0.022 261.325);
+    --tw-prose-invert-kbd: #fff;
+    --tw-prose-invert-kbd-shadows: rgb(255 255 255 / 10%);
+    --tw-prose-invert-code: #fff;
+    --tw-prose-invert-pre-code: oklch(87.2% 0.01 258.338);
+    --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+    --tw-prose-invert-th-borders: oklch(44.6% 0.03 256.802);
+    --tw-prose-invert-td-borders: oklch(37.3% 0.034 259.733);
+    font-size: 1rem;
+    line-height: 1.75;
+    :where(picture > img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    :where(li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    :where(ol > li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-start: 0.375em;
+    }
+    :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-start: 0.375em;
+    }
+    :where(.prose > ul > li p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+    }
+    :where(.prose > ul > li > p:first-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 1.25em;
+    }
+    :where(.prose > ul > li > p:last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-bottom: 1.25em;
+    }
+    :where(.prose > ol > li > p:first-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 1.25em;
+    }
+    :where(.prose > ol > li > p:last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-bottom: 1.25em;
+    }
+    :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+    }
+    :where(dl):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+    }
+    :where(dd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0.5em;
+      padding-inline-start: 1.625em;
+    }
+    :where(hr + *):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+    }
+    :where(h2 + *):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+    }
+    :where(h3 + *):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+    }
+    :where(h4 + *):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+    }
+    :where(thead th:first-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-start: 0;
+    }
+    :where(thead th:last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-end: 0;
+    }
+    :where(tbody td, tfoot td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-top: 0.5714286em;
+      padding-inline-end: 0.5714286em;
+      padding-bottom: 0.5714286em;
+      padding-inline-start: 0.5714286em;
+    }
+    :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-start: 0;
+    }
+    :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      padding-inline-end: 0;
+    }
+    :where(figure):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    :where(.prose > :first-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-top: 0;
+    }
+    :where(.prose > :last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      margin-bottom: 0;
+    }
+    max-width: none;
+    & :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      font-family: var(--font-display);
+    }
+    & :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      --tw-tracking: var(--tracking-tight);
+      letter-spacing: var(--tracking-tight);
+    }
+    & :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      color: var(--color-brand-600);
+    }
+    & :is(:where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      background-color: var(--color-ink-950);
+    }
+    & :is(:where(img):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      border-radius: var(--radius-lg);
+    }
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-md);
+    background-color: var(--color-brand-50);
+    padding-inline: calc(var(--spacing) * 2.5);
+    padding-block: calc(var(--spacing) * 0.5);
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-brand-700);
+  }
+  .sidebar-card {
+    border-radius: var(--radius-xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-ink-200);
+    background-color: var(--color-white);
+    padding: calc(var(--spacing) * 5);
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .cover-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-outline-style: solid;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+    }
+  }
+}
+</style><script type="module" src="/@vite/client"></script><script type="module" src="/@id/astro/runtime/client/dev-toolbar/entrypoint.js"></script><script>window.__astro_dev_toolbar__ = {"root":"C:\\aiseoproject\\chatgpt-blog-org\\","version":"7.1.6","debugInfo":"Astro                    v7.1.6\nNode                     v24.15.0\nSystem                   Windows (x64)\nPackage Manager          npm\nOutput                   static\nAdapter                  none\nIntegrations             @astrojs/mdx\n                         @astrojs/sitemap"}</script><script type="module" src="/@id/astro:scripts/page.js"></script><script type="module" src="/src/styles/global.css"></script></head><body class="min-h-screen flex flex-col "><header class="sticky top-0 z-50 border-b border-ink-200/80 bg-white/90 backdrop-blur-md"><div class="container-site"><div class="flex h-16 items-center justify-between gap-4"><a href="/" class="group flex items-center gap-2.5" aria-label="ChatGPTåå®¢ é¦é¡µ"><img src="/images/logo.svg" alt="" width="36" height="36" class="shrink-0 rounded-lg shadow-sm transition group-hover:opacity-90" decoding="async"><span class="font-display text-lg font-bold tracking-tight text-ink-950">ChatGPTåå®¢</span></a><nav class="hidden items-center gap-1 md:flex" aria-label="ä¸»å¯¼èª"><a href="/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">é¦é¡µ</a><a href="/guides/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors bg-brand-50 text-brand-700" aria-current="page">æç¨æå</a><a href="/compare/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">æ¨¡åè¯æµ</a><a href="/news/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">å¿«è®¯</a><a href="/tools/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">AIå·¥å·</a><a href="/faq/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">å¸¸è§é®é¢</a><a href="/about/" class="rounded-lg px-3 py-2 text-sm font-medium transition-colors text-ink-600 hover:bg-ink-100 hover:text-ink-900">å³äº</a></nav><div class="flex items-center gap-2"><a href="/search/" class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink-600 transition hover:bg-ink-100 hover:text-ink-900" aria-label="æç´¢æç« "><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"></path></svg></a><button type="button" id="mobile-menu-btn" class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink-600 transition hover:bg-ink-100 md:hidden" aria-label="æå¼èå" aria-expanded="false" aria-controls="mobile-menu"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div><nav id="mobile-menu" class="hidden border-t border-ink-100 py-3 md:hidden" aria-label="ç§»å¨ç«¯å¯¼èª"><ul class="flex flex-col gap-1"><li><a href="/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">é¦é¡µ</a></li><li><a href="/guides/" class="block rounded-lg px-3 py-2.5 text-sm font-medium bg-brand-50 text-brand-700">æç¨æå</a></li><li><a href="/compare/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">æ¨¡åè¯æµ</a></li><li><a href="/news/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">å¿«è®¯</a></li><li><a href="/tools/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">AIå·¥å·</a></li><li><a href="/faq/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">å¸¸è§é®é¢</a></li><li><a href="/about/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">å³äº</a></li><li><a href="/search/" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-100">æç´¢</a></li></ul></nav></div></header><script type="module" src="/src/components/common/Header.astro?astro&type=script&index=0&lang.ts"></script><main class="flex-1"><div class="container-site py-8 lg:py-10"><nav aria-label="é¢åå±"><ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-500"><li class="flex items-center gap-1.5"><a href="/" class="hover:text-brand-600">é¦é¡µ</a></li><li class="flex items-center gap-1.5"><span class="text-ink-300" aria-hidden="true">/</span><a href="/guides/" class="hover:text-brand-600">æç¨æå</a></li><li class="flex items-center gap-1.5"><span class="text-ink-300" aria-hidden="true">/</span><span class="font-medium text-ink-800" aria-current="page">ChatGPT ä»ç»</span></li></ol></nav><!-- Hero --><header class="mt-6 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]"><div><p class="text-sm font-semibold uppercase tracking-wide text-brand-600">ChatGPT ä»ç»</p><h1 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-950 text-balance sm:text-4xl lg:text-5xl">ChatGPT æ¯ä»ä¹ï¼åè½ä»ç»ä¸å¥é¨æå</h1><p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-600">ChatGPT æ¯ OpenAI æ¨åºçå¯¹è¯å¼ AI å©æï¼å¹¿æ³ç¨äºåä½ãç¼ç¨ãå­¦ä¹ è¾å¯¼ãç¿»è¯ä¸åå¬ææã æ¬é¡µç¨æ¸æ°ç»æè¯´æå®è½åä»ä¹ãéåè°ãå¦ä½å¼å§ï¼å¹¶æ±æ»æ¬ç«ç¸å³æç¨ã</p><div class="mt-6 flex flex-wrap gap-3"><a href="https://babawuai.com/products/ai-chat/gpt-5-6-sol/" target="_blank" rel="noopener noreferrer" class="btn-primary">ç«å³ä½éª ChatGPT â</a><a href="/guides/what-is-chatgpt-beginner-guide/" class="btn-secondary">æ°æ 10 åéä¸æ</a><a href="/compare/" class="btn-secondary">åå¶ä»æ¨¡åå¯¹æ¯</a></div><p class="mt-4 text-xs leading-relaxed text-ink-500">æ¬ç«ä¸ OpenAIãAnthropicãGoogle ç­æ å³èæææå³ç³»ï¼ä»ä¸ºç¬¬ä¸æ¹å­¦ä¹ èµè®¯å¹³å°ãåå®¹ä»ä¾åèï¼è¯·éµå®å½å°æ³å¾æ³è§ä¸åå¹³å°æå¡æ¡æ¬¾ã</p></div><figure class="overflow-hidden rounded-2xl border border-ink-200 bg-ink-50 shadow-sm"><img src="/images/covers/chatgpt.svg" alt="ChatGPT ä»ç»å°é¢ï¼å¯¹è¯å¼ AI å©æ" width="1200" height="630" class="cover-img" loading="eager" decoding="sync"></figure></header><div class="mt-10"><aside class="rounded-xl border border-brand-200 bg-brand-50/70 p-5 sm:p-6" aria-label="æ¨¡åä½¿ç¨å¥å£"><p class="font-display font-bold text-ink-950 text-base">è¾¹äºè§£è¾¹è¯ç¨</p><p class="mt-1.5 text-sm leading-relaxed text-ink-600">è¯»å®ä»ç»åï¼ç´æ¥æå¼ ChatGPT å®æç¬¬ä¸è½®å¯¹è¯ï¼å­¦ä¹ æçæ´é«ã</p><div class="flex flex-wrap gap-2 mt-4"><a href="https://babawuai.com/products/ai-chat/gpt-5-6-sol/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg font-semibold transition btn-primary text-sm">ç«å³ä½éª ChatGPT<span class="ml-1" aria-hidden="true">â</span></a></div></aside></div><!-- ä»ä¹æ¯ --><section class="mt-14" aria-labelledby="what-heading"><h2 id="what-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ä»ä¹æ¯ ChatGPTï¼</h2><div class="prose-blog mt-5 max-w-3xl"><p>ChatGPT å¯ä»¥çè§£æä¸ä¸ªè½è¯»æèªç¶è¯­è¨ãå¹¶çæææ¬ï¼ä»¥åé¨åå¤æ¨¡æç»æï¼çæºè½å©æã ä½ ç¨ä¸­ææè±ææè¿°ä»»å¡ï¼å®ä¼ç»åºèç¨¿ãæ­¥éª¤ãä»£ç ç¤ºä¾ææ¹åå»ºè®®ã</p><p>å®æé¿å éåå®¹çäº§ä¸æè·¯æ´çï¼ä½<strong>ä¸è½ä¿è¯äºå®æ°¸è¿æ­£ç¡®</strong>ï¼ä¹ä¸è½æ¿ä»£ä¸ä¸å»çãæ³å¾æè´¢å¡å³ç­ã æ­£ç¡®ç¨æ³æ¯ï¼ä½ è´è´£ç®æ ä¸æ ¸å¯¹ï¼ChatGPT è´è´£å éæ§è¡ã</p><p>æ³å¿«éä¸æï¼å¯éè¯»<a href="/guides/what-is-chatgpt-beginner-guide/">æ°ææå</a>ä¸<a href="/guides/chatgpt-register-guide/">æ³¨åå¥é¨</a>ï¼ å³æ³¨è®¿é®éå¶æ¶è§<a href="/guides/chatgpt-china-usage-guide-2026/">å½åä½¿ç¨è¯´æ</a>ä¸<a href="/access/">è®¿é®ä¸ä½¿ç¨è¯´æ</a>ã</p></div></section><!-- ç¹æ§ --><section class="mt-14" aria-labelledby="features-heading"><h2 id="features-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ChatGPT æ ¸å¿ç¹æ§</h2><p class="mt-3 max-w-2xl text-ink-600">ä»å¯¹è¯ãåä½å°ç¼ç¨ä¸å­¦ä¹ ï¼è¦çæ¥å¸¸æé«é¢ç AI ä½¿ç¨éæ±ã</p><div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">æºè½å¯¹è¯</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">ç¨èªç¶è¯­è¨è¿ç»­æé®ï¼ChatGPT è½ç»åä¸ä¸æåç­ï¼éåé®ç­ãå¤´èé£æ´ä¸ä»»å¡æè§£ã</p></article><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">AI åä½å©æ</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">çæå¤§çº²ãæ¹åæ¶¦è²ãä¸­è±äºè¯ãé®ä»¶ä¸æ¹æ¡åç¨¿ï¼æ¾èç¼©ç­åå®¹åä½æ¶é´ã</p></article><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">ä»£ç ä¸è°è¯</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">è§£éæ¥éãåç¤ºä¾ä»£ç ãåå©éææè·¯ï¼è¦çå¤ç§å¸¸è§ç¼ç¨è¯­è¨ä¸èæ¬åºæ¯ã</p></article><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">å­¦ä¹ è¾å¯¼</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">ç¨ç±»æ¯è®²æ¸æ¦å¿µãåºç»ä¹ é¢ãçº æ­£è±æè¡¨è¾¾ï¼éåèªå­¦ä¸èè¯å¤ä¹ è¾å©ã</p></article><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">å¤æ¨¡æè½å</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">å¨æ¯æçäº§åå½¢æä¸å¤çææ¬ãå¾åç­è¾å¥ï¼ç¨äºæªå¾çè§£ãéå¾æç¤ºç­ä»»å¡ã</p></article><article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm"><h3 class="font-display text-lg font-bold text-ink-950">å¤è¯­è¨æ¯æ</h3><p class="mt-2 text-sm leading-relaxed text-ink-600">ä¸­è±æç­å¤è¯­è¨äº¤æµä¸ç¿»è¯æ¶¦è²ï¼æ¹ä¾¿è·¨å¢æ²éä¸è¯­è¨å­¦ä¹ ã</p></article></div></section><!-- è½åä»ä¹ --><section class="mt-14" aria-labelledby="usecases-heading"><h2 id="usecases-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ChatGPT è½åä»ä¹ï¼</h2><p class="mt-3 max-w-2xl text-ink-600">æåºæ¯éä»»å¡ï¼æ¯åªé®ãå¸®æåç¹ä¸è¥¿ãæ´å®¹æå¾å°å¯ç¨ç»æã</p><div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">åå®¹åä½</h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ åå®¢ä¸æç¨æç¨¿</li><li>â¢ è¥éææ¡ä¸æ é¢</li><li>â¢ æäºãèæ¬ä¸åæèç¨¿</li></ul></article><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">ç¼ç¨å¼å</h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ ä»£ç ç¤ºä¾ä¸æ³¨é</li><li>â¢ æ¥éææ¥æè·¯</li><li>â¢ æ¥å£è®¾è®¡ä¸ä¼ªä»£ç </li></ul></article><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">æè²å­¦ä¹ </h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ æ¦å¿µè®²è§£ä¸ä¾é¢</li><li>â¢ è±è¯­çº éä¸å£è¯­éªç»</li><li>â¢ å­¦ä¹ è®¡åæè§£</li></ul></article><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">åå¬æç</h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ ä¼è®®çºªè¦æ´ç</li><li>â¢ å¨æ¥ä¸é®ä»¶èµ·è</li><li>â¢ è¡¨æ ¼æ°æ®è§£è¯»å»ºè®®</li></ul></article><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">ç ç©¶åæ</h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ èµæå½çº³ä¸å¯¹æ¯</li><li>â¢ é®é¢æ¸åæ¢³ç</li><li>â¢ æ¹æ¡ä¼ç¼ºç¹åæ</li></ul></article><article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5"><h3 class="font-semibold text-ink-950">è¯­è¨æå¡</h3><ul class="mt-3 space-y-1.5 text-sm text-ink-700"><li>â¢ ä¸­è±äºè¯ä¸æ¶¦è²</li><li>â¢ æ¯è¯­ç»ä¸</li><li>â¢ æ¬å°åè¡¨è¾¾å»ºè®®</li></ul></article></div></section><!-- éåè° --><section class="mt-14" aria-labelledby="audience-heading"><h2 id="audience-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ChatGPT éååªäºäººï¼</h2><div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">å­¦çä¸èªå­¦è</h3><p class="mt-2 text-sm text-ink-600">è®²è§£é¾ç¹ãåé¢åé¦ãå¶å®å¤ä¹ èå¥</p></article><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">åå®¹åä½è</h3><p class="mt-2 text-sm text-ink-600">éé¢ãå¤§çº²ãæ¹åä¸å¤çæ¬ææ¡</p></article><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">å¼åè</h3><p class="mt-2 text-sm text-ink-600">è¯»ä»£ç ãåç¤ºä¾ãæ¢³çææ¯æ¹æ¡</p></article><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">èåºç½é¢</h3><p class="mt-2 text-sm text-ink-600">é®ä»¶ãæ±æ¥ãä¼è®®çºªè¦ä¸æ¹æ¡åç¨¿</p></article><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">è¿è¥ä¸å¸åº</h3><p class="mt-2 text-sm text-ink-600">æ´»å¨ææ¡ãç¨æ·è¯æ¯ãç«åè¦ç¹æ´ç</p></article><article class="rounded-xl border border-ink-200 bg-white p-5"><h3 class="font-semibold text-ink-950">ç ç©¶èä¸åæ</h3><p class="mt-2 text-sm text-ink-600">é¿ææè¦ãé®é¢æ¡æ¶ä¸å¯¹æ¯è¡¨</p></article></div></section><!-- å¦ä½å¼å§ --><section class="mt-14" aria-labelledby="start-heading"><h2 id="start-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">å¦ä½å¼å§ä½¿ç¨ ChatGPTï¼</h2><ol class="mt-6 max-w-3xl list-decimal space-y-3 pl-5 text-ink-700"><li>æå¼<a class="font-semibold text-brand-700 hover:underline" href="https://babawuai.com/products/ai-chat/gpt-5-6-sol/" target="_blank" rel="noopener noreferrer">ChatGPT ä½¿ç¨å¥å£</a>ï¼å®æç»å½æè¿å¥å¯¹è¯ã</li><li>ç¨ãè§è² + ä»»å¡ + çº¦æ + è¾åºæ ¼å¼ãæé®ï¼åè¦å¤§çº²åæ©åã</li><li>å¯¹éè¦äºå®äººå·¥å¤æ ¸ï¼ææä¿¡æ¯ä¸è¦éæä¸ä¼ ã</li><li>éè¦æç¤ºè¯æ¨¡æ¿æ¶æ¥ç<a class="font-semibold text-brand-700 hover:underline" href="/guides/prompt-templates-library/">æç¤ºè¯æ¨¡æ¿åº</a>ï¼å­¦è±è¯­å¯ç<a class="font-semibold text-brand-700 hover:underline" href="/guides/chatgpt-learn-english-guide-2026/">ChatGPT å­¦è±è¯­æç¨</a>ã</li></ol><div class="mt-6 flex flex-wrap gap-3"><a href="https://babawuai.com/products/ai-chat/gpt-5-6-sol/" target="_blank" rel="noopener noreferrer" class="btn-primary">ç«å³ä½éª ChatGPT</a><a href="/guides/chatgpt-free-vs-plus/" class="btn-secondary">åè´¹ç vs Plus</a><a href="/guides/chatgpt-access-troubleshooting/" class="btn-secondary">è®¿é®é®é¢ææ¥</a></div></section><!-- FAQ --><section class="mt-14" aria-labelledby="faq-heading"><h2 id="faq-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ChatGPT å¸¸è§é®é¢</h2><p class="mt-3 text-ink-600">å³äºå®ä¹ãä¸æãåè´¹çãå½åä½¿ç¨ä¸æé®æå·§çéä¸­è§£ç­ã</p><div class="mt-6 max-w-3xl"><div class="space-y-3"><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm" open><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>ChatGPT æ¯ä»ä¹ï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">ChatGPT æ¯ OpenAI æ¨åºçå¯¹è¯å¼ AI å©æï¼å¯ä»¥éè¿æå­ï¼åé¨åå¤æ¨¡æè½åï¼å®æåä½ãå­¦ä¹ ãç¼ç¨è¾å©ãç¿»è¯ä¸å¤´èé£æ´ç­ä»»å¡ãå®ä¸æ¯æç´¢å¼æï¼è¾åºéè¦äººå·¥æ ¸å¯¹ã</div></details><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>ChatGPT æä¹å¼å§ç¨ï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">åéè¿å¯ç¨çäº§åå¥å£è¿å¥å¯¹è¯çé¢ï¼ç¨è§è²+ä»»å¡+çº¦æçæ¹å¼æé®ãæ°æå¯éè¯»æ¬ç«ãChatGPT æ¯ä»ä¹ï¼æ°æ 10 åéä¸æãä¸ãæ³¨åä¸å¥é¨ãæç¨ï¼è¾¹å­¦è¾¹ç»ã</div></details><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>ChatGPT åè´¹çå¤ç¨åï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">è½»åº¦å­¦ä¹ ãä½éªä¸å¶å°åä½ï¼åè´¹çéå¸¸å¤ç¨ï¼é«é¢æ·±åº¦ä½¿ç¨åèèè®¢éãè¯¦è§ãChatGPT åè´¹ç vs Plusãå¯¹æ¯æã</div></details><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>å½åç¨æ·å¦ä½äºè§£ä¸ä½¿ç¨ ChatGPTï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">è¯·ä¼åéè¯»ãChatGPT å½åä½¿ç¨å®æ´æåãä¸ãè®¿é®ä¸ä½¿ç¨è¯´æãï¼äºè§£åè§è·¯å¾ãå®æ¹æ¿ç­ä¸æ¿ä»£æ¹æ¡ãæ¬ç«ä¸æä¾è¿è§è®¿é®æ¹å¼ã</div></details><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>ææ ·è®© ChatGPT åç­æ´åç¡®ï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">è¡¥åèæ¯ãæç¡®è¾åºæ ¼å¼ãç»åºç¤ºä¾ï¼å¹¶å¯¹äºå®ç±»ç»è®ºè¦æ±ãä¸ç¡®å®è¯·æ æããå¤æä»»å¡ææå¤§çº²âåæ®µâæ ¡å¯¹ã</div></details><details class="group rounded-xl border border-ink-200 bg-white open:shadow-sm"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink-900 marker:content-none"><span>æ¬ç«ä¸ ChatGPT / OpenAI æå³ç³»åï¼</span><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-600 transition group-open:rotate-45 group-open:bg-brand-50 group-open:text-brand-700" aria-hidden="true">+</span></summary><div class="border-t border-ink-100 px-5 py-4 text-sm leading-relaxed text-ink-600">æ²¡æãæ¬ç«æ¯ç¬ç«ç¬¬ä¸æ¹æç¨ä¸èµè®¯åå®¢ï¼ä¸ OpenAI æ å³èæææå³ç³»ãåæ å½åèªææèææã</div></details></div></div><p class="mt-4 text-sm"><a href="/faq/" class="font-semibold text-brand-600 hover:underline">æ¥çå¨ç« FAQ â</a></p></section><!-- ç¸å³æç¨ --><section class="mt-14" aria-labelledby="guides-heading"><div class="flex flex-wrap items-end justify-between gap-4"><div><h2 id="guides-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">ChatGPT ç¸å³æç¨</h2><p class="mt-3 text-ink-600">ä»å¥é¨ãå½åä½¿ç¨å° API ä¸æç¤ºè¯ï¼æéæ·±å¥ã</p></div><a href="/guides/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">å¨é¨æç¨ â</a></div><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/chatgpt-learn-english-guide-2026/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt-english.svg" alt="ChatGPT å­¦è±è¯­æä¹ç¨ï¼çº éãå£è¯­éªç»ä¸å¤ä¹ è®¡åå°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-08-03T00:00:00.000Z">2026å¹´8æ3æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/chatgpt-learn-english-guide-2026/" class="hover:text-brand-700">ChatGPT å­¦è±è¯­æä¹ç¨ï¼çº éãå£è¯­éªç»ä¸å¤ä¹ è®¡åï¼2026ï¼</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">æææç¨ ChatGPT å­¦è±è¯­ï¼è¯­æ³çº éãææ¯å£è¯­éªç»ãç¿»è¯å¯¹æ¯ä¸æ¯æ¥å¤ä¹ è®¡åï¼éå¯ç´æ¥å¤å¶çæç¤ºè¯ï¼éåæ³å¼å£ç»çä¸­æç¨æ·ã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/chatgpt-china-usage-guide-2026/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt.svg" alt="ChatGPT å½åä½¿ç¨å®æ´æåï¼2026ï¼ å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-07-31T00:00:00.000Z">2026å¹´7æ31æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/chatgpt-china-usage-guide-2026/" class="hover:text-brand-700">ChatGPT å½åä½¿ç¨å®æ´æåï¼2026ï¼</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">é¢åå½åç¨æ·ç ChatGPT ä½¿ç¨è¯´æï¼å®æ¹æ¿ç­ãåè§è®¿é®æè·¯ãAPI ä¸æ¿ä»£æ¨¡åéæ©ï¼å¸®å©ä½ åæ³ãå®å¨å°äºè§£å¹¶ä½¿ç¨å¤§æ¨¡åã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/what-is-chatgpt-beginner-guide/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt.svg" alt="ChatGPT æ¯ä»ä¹ï¼æ°æ 10 åéä¸ææå å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-07-30T00:00:00.000Z">2026å¹´7æ30æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/what-is-chatgpt-beginner-guide/" class="hover:text-brand-700">ChatGPT æ¯ä»ä¹ï¼æ°æ 10 åéä¸ææå</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">ç¨æç­è·¯å¾è®²æ¸ ChatGPT è½åä»ä¹ãä¸è½åä»ä¹ï¼ä»¥åç¬¬ä¸æ¬¡å¯¹è¯æä¹é®ï¼å¸®å©é¶åºç¡ç¨æ·å¿«éä¸æã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/chatgpt-free-vs-plus/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt.svg" alt="ChatGPT åè´¹ç vs Plusï¼2026 æä¹éæ´åç® å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-07-29T00:00:00.000Z">2026å¹´7æ29æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/chatgpt-free-vs-plus/" class="hover:text-brand-700">ChatGPT åè´¹ç vs Plusï¼2026 æä¹éæ´åç®</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">å¯¹æ¯ ChatGPT åè´¹çä¸ Plus çæ¨¡åæéãéåº¦ãåè½ä¸éç¨äººç¾¤ï¼å¸®ä½ å¤æ­æ¯æ 20 ç¾åæ¯å¦å¼å¾ã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/openai-api-nodejs-guide/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/api.svg" alt="OpenAI API å¥é¨å®æï¼ç¨ Node.js è°ç¨ Chat Completions å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">APIå¼å</span><time datetime="2026-07-28T00:00:00.000Z">2026å¹´7æ28æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/openai-api-nodejs-guide/" class="hover:text-brand-700">OpenAI API å¥é¨å®æï¼ç¨ Node.js è°ç¨ Chat Completions</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">ä»åå»º API Keyãåèµ·ç¬¬ä¸æ¬¡è¯·æ±å°éè¯¯å¤çä¸ææ¬æ§å¶ï¼å¸¦ä½ ç¨ Node.js å¿«éæ¥å¥ OpenAI Chat Completions APIã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/openai-api-streaming-cost/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/api.svg" alt="OpenAI API è¿é¶ï¼æµå¼è¾åºä¸ææ¬æ§å¶ å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">APIå¼å</span><time datetime="2026-07-24T00:00:00.000Z">2026å¹´7æ24æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/openai-api-streaming-cost/" class="hover:text-brand-700">OpenAI API è¿é¶ï¼æµå¼è¾åºä¸ææ¬æ§å¶</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">å¨ Node.js ä¸­å®ç° Chat Completions æµå¼è¾åºï¼å¹¶ç»åºéæµéè¯ãtoken é¢ç®ä¸ç¼å­ç­å¯è½å°çææ¬æ§å¶æ¸åã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/chatgpt-access-troubleshooting/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt.svg" alt="ChatGPT å¸¸è§è®¿é®é®é¢ä¸æ¥éææ¥ å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-07-21T00:00:00.000Z">2026å¹´7æ21æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/chatgpt-access-troubleshooting/" class="hover:text-brand-700">ChatGPT å¸¸è§è®¿é®é®é¢ä¸æ¥éææ¥</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">æ±æ» ChatGPT æä¸å¼ãä¸ç´è½¬åãç»å½å¤±è´¥ãéªè¯ç æ¶ä¸å°ãé¢åº¦ç¨å°½ç­å¸¸è§é®é¢ï¼å¹¶ç»åºåè§ææ¥æ­¥éª¤ã</p></div></article><article class="group overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm card-hover"><a href="/guides/chatgpt-register-guide/" class="block overflow-hidden bg-ink-100"><img src="/images/covers/chatgpt.svg" alt="ChatGPT æ³¨åä¸å¥é¨ï¼ä»é¶å°ç¬¬ä¸æ¬¡å¯¹è¯ å°é¢" width="640" height="360" loading="lazy" decoding="async" class="cover-img transition duration-300 group-hover:scale-[1.02]"></a><div class="p-5"><div class="flex flex-wrap items-center gap-2 text-xs text-ink-500"><span class="tag">å¥é¨æç¨</span><time datetime="2026-07-20T00:00:00.000Z">2026å¹´7æ20æ¥</time></div><h3 class="mt-3 font-display text-lg font-bold leading-snug text-ink-950"><a href="/guides/chatgpt-register-guide/" class="hover:text-brand-700">ChatGPT æ³¨åä¸å¥é¨ï¼ä»é¶å°ç¬¬ä¸æ¬¡å¯¹è¯</a></h3><p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-600">ææææä½ å®æ ChatGPT è´¦å·æ³¨åãçé¢è®¤è¯ä¸ç¬¬ä¸æ¬¡é«è´¨éæé®ï¼éåå®å¨é¶åºç¡çæ°æå¿«éä¸æã</p></div></article></div></section></div></main><footer class="mt-auto border-t border-ink-200 bg-white"><div class="container-site py-10"><div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"><div class="lg:col-span-1"><a href="/" class="group inline-flex items-center gap-2.5" aria-label="ChatGPTåå®¢ é¦é¡µ"><img src="/images/logo.svg" alt="" width="32" height="32" class="shrink-0 rounded-lg shadow-sm transition group-hover:opacity-90" decoding="async"><p class="font-display text-lg font-bold text-ink-950">ChatGPTåå®¢</p></a><p class="mt-2 max-w-sm text-sm leading-relaxed text-ink-600">æ·±åº¦è§£æ ChatGPTãClaudeãGeminiï¼å½åä½¿ç¨è¯´æãæ°ææç¨ãæ¨¡åå¯¹æ¯ãAPI å¼åä¸ AI å·¥å·æ¨èï¼å¸®ä½ éå¯¹æ¨¡åå¹¶çæ­£ç¨èµ·æ¥ã</p></div><div><h2 class="text-sm font-semibold uppercase tracking-wide text-ink-500">åå®¹å¯¼èª</h2><ul class="mt-3 space-y-2 text-sm"><li><a class="text-ink-700 hover:text-brand-600" href="/guides/">æç¨æå</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/compare/">æ¨¡åè¯æµ</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/news/">AI å¿«è®¯</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/tools/">AI å·¥å·</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/access/">è®¿é®è¯´æ</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/faq/">å¸¸è§é®é¢</a></li></ul></div><div><h2 class="text-sm font-semibold uppercase tracking-wide text-ink-500">æ¨¡åä¸æ </h2><ul class="mt-3 space-y-2 text-sm"><li><a class="text-ink-700 hover:text-brand-600" href="/guides/chatgpt/">ChatGPT</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/guides/claude/">Claude</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/guides/gemini/">Gemini</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/guides/grok/">Grok</a></li></ul></div><div><h2 class="text-sm font-semibold uppercase tracking-wide text-ink-500">å³äº</h2><ul class="mt-3 space-y-2 text-sm"><li><a class="text-ink-700 hover:text-brand-600" href="/about/">å³äºæä»¬</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/authors/">ä½èç¼è¾é¨</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/privacy/">éç§æ¿ç­</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/tags/">æç« æ ç­¾</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/sitemap/">ç½ç«å°å¾</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/rss.xml">RSS è®¢é</a></li><li><a class="text-ink-700 hover:text-brand-600" href="/search/">ç«åæç´¢</a></li></ul><h2 class="mt-6 text-sm font-semibold uppercase tracking-wide text-ink-500">åæé¾æ¥</h2><ul class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm"><li><a class="text-ink-700 hover:text-brand-600" href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a></li><li><a class="text-ink-700 hover:text-brand-600" href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a></li><li><a class="text-ink-700 hover:text-brand-600" href="https://ai.google" target="_blank" rel="noopener noreferrer">Google AI</a></li><li><a class="text-ink-700 hover:text-brand-600" href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a></li></ul></div></div><div class="mt-8 border-t border-ink-100 pt-6 text-center text-sm text-ink-500"><p>&copy; 2026 ChatGPTåå®¢ Â· chatgpt-blog.org</p><p class="mt-1">æ¬ç«ä¸ OpenAIãAnthropicãGoogle ç­æ å³èæææå³ç³»ï¼ä»ä¸ºç¬¬ä¸æ¹å­¦ä¹ èµè®¯å¹³å°ãåå®¹ä»ä¾åèï¼è¯·éµå®å½å°æ³å¾æ³è§ä¸åå¹³å°æå¡æ¡æ¬¾ã</p></div></div></footer></body></html>

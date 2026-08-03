@@ -1,21 +1,286 @@
 ---
+/**
+ * ChatGPT 介绍落地页（SEO）：能力介绍 + 场景 + FAQ + 教程聚合
+ */
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/common/Breadcrumb.astro';
-import ModelHub from '@components/blog/ModelHub.astro';
-import { siteConfig, modelHubs } from '@config/site';
-import { buildBreadcrumbSchema } from '@utils/schema';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import FAQ from '@components/common/FAQ.astro';
+import ProductCta from '@components/blog/ProductCta.astro';
+import { siteConfig, modelHubs, chatgptIntro } from '@config/site';
+import { getGuidesByModel } from '@utils/guides';
+import { getProduct } from '@utils/products';
+import { buildBreadcrumbSchema, buildFaqSchema } from '@utils/schema';
 
 const hub = modelHubs.find((h) => h.slug === 'chatgpt')!;
-const schema = buildBreadcrumbSchema([
-  { name: '首页', url: siteConfig.url },
-  { name: '教程指南', url: `${siteConfig.url}/guides/` },
-  { name: hub.name, url: `${siteConfig.url}${hub.href}` },
-]);
+const guides = await getGuidesByModel('chatgpt');
+const product = getProduct('chatgpt');
+const pageUrl = `${siteConfig.url}${hub.href}`;
+
+const schema = [
+  buildBreadcrumbSchema([
+    { name: '首页', url: siteConfig.url },
+    { name: '教程指南', url: `${siteConfig.url}/guides/` },
+    { name: 'ChatGPT 介绍', url: pageUrl },
+  ]),
+  buildFaqSchema(chatgptIntro.faqs),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: chatgptIntro.title,
+    description: chatgptIntro.description,
+    url: pageUrl,
+    inLanguage: siteConfig.language,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    about: {
+      '@type': 'SoftwareApplication',
+      name: 'ChatGPT',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      creator: {
+        '@type': 'Organization',
+        name: 'OpenAI',
+      },
+    },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/images/covers/chatgpt.svg`,
+    },
+  },
+];
 ---
 
-<BaseLayout title={`${hub.name} 教程中心`} description={hub.description} canonical={hub.href} schema={schema}>
+<BaseLayout
+  title={chatgptIntro.title}
+  description={chatgptIntro.description}
+  canonical={hub.href}
+  image="/images/covers/chatgpt.svg"
+  schema={schema}
+>
   <div class="container-site py-8 lg:py-10">
-    <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '教程指南', href: '/guides/' }, { label: hub.name }]} />
-    <ModelHub model="chatgpt" />
+    <Breadcrumb
+      items={[
+        { label: '首页', href: '/' },
+        { label: '教程指南', href: '/guides/' },
+        { label: 'ChatGPT 介绍' },
+      ]}
+    />
+
+    <!-- Hero -->
+    <header class="mt-6 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-brand-600">ChatGPT 介绍</p>
+        <h1 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink-950 text-balance sm:text-4xl lg:text-5xl">
+          ChatGPT 是什么？功能介绍与入门指南
+        </h1>
+        <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-600">
+          ChatGPT 是 OpenAI 推出的对话式 AI 助手，广泛用于写作、编程、学习辅导、翻译与办公提效。
+          本页用清晰结构说明它能做什么、适合谁、如何开始，并汇总本站相关教程。
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href={product.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+          >
+            立即体验 ChatGPT →
+          </a>
+          <a href="/guides/what-is-chatgpt-beginner-guide/" class="btn-secondary">新手 10 分钟上手</a>
+          <a href="/compare/" class="btn-secondary">和其他模型对比</a>
+        </div>
+        <p class="mt-4 text-xs leading-relaxed text-ink-500">{siteConfig.disclaimer}</p>
+      </div>
+      <figure class="overflow-hidden rounded-2xl border border-ink-200 bg-ink-50 shadow-sm">
+        <img
+          src="/images/covers/chatgpt.svg"
+          alt="ChatGPT 介绍封面：对话式 AI 助手"
+          width="1200"
+          height="630"
+          class="cover-img"
+          loading="eager"
+          decoding="sync"
+        />
+      </figure>
+    </header>
+
+    <div class="mt-10">
+      <ProductCta
+        products={[product]}
+        title="边了解边试用"
+        description="读完介绍后，直接打开 ChatGPT 完成第一轮对话，学习效率更高。"
+      />
+    </div>
+
+    <!-- 什么是 -->
+    <section class="mt-14" aria-labelledby="what-heading">
+      <h2 id="what-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        什么是 ChatGPT？
+      </h2>
+      <div class="prose-blog mt-5 max-w-3xl">
+        <p>
+          ChatGPT 可以理解成一个能读懂自然语言、并生成文本（以及部分多模态结果）的智能助手。
+          你用中文或英文描述任务，它会给出草稿、步骤、代码示例或改写建议。
+        </p>
+        <p>
+          它擅长加速内容生产与思路整理，但<strong>不能保证事实永远正确</strong>，也不能替代专业医疗、法律或财务决策。
+          正确用法是：你负责目标与核对，ChatGPT 负责加速执行。
+        </p>
+        <p>
+          想快速上手，可阅读
+          <a href="/guides/what-is-chatgpt-beginner-guide/">新手指南</a>
+          与
+          <a href="/guides/chatgpt-register-guide/">注册入门</a>；
+          关注访问限制时见
+          <a href="/guides/chatgpt-china-usage-guide-2026/">国内使用说明</a>
+          与
+          <a href="/access/">访问与使用说明</a>。
+        </p>
+      </div>
+    </section>
+
+    <!-- 特性 -->
+    <section class="mt-14" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        ChatGPT 核心特性
+      </h2>
+      <p class="mt-3 max-w-2xl text-ink-600">从对话、写作到编程与学习，覆盖日常最高频的 AI 使用需求。</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          chatgptIntro.features.map((item) => (
+            <article class="rounded-xl border border-ink-200 bg-white p-5 shadow-sm">
+              <h3 class="font-display text-lg font-bold text-ink-950">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-600">{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- 能做什么 -->
+    <section class="mt-14" aria-labelledby="usecases-heading">
+      <h2 id="usecases-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        ChatGPT 能做什么？
+      </h2>
+      <p class="mt-3 max-w-2xl text-ink-600">按场景选任务，比只问「帮我写点东西」更容易得到可用结果。</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          chatgptIntro.useCases.map((group) => (
+            <article class="rounded-xl border border-ink-200 bg-ink-50/50 p-5">
+              <h3 class="font-semibold text-ink-950">{group.title}</h3>
+              <ul class="mt-3 space-y-1.5 text-sm text-ink-700">
+                {group.items.map((item) => (
+                  <li>• {item}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- 适合谁 -->
+    <section class="mt-14" aria-labelledby="audience-heading">
+      <h2 id="audience-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        ChatGPT 适合哪些人？
+      </h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          chatgptIntro.audiences.map((item) => (
+            <article class="rounded-xl border border-ink-200 bg-white p-5">
+              <h3 class="font-semibold text-ink-950">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-600">{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- 如何开始 -->
+    <section class="mt-14" aria-labelledby="start-heading">
+      <h2 id="start-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        如何开始使用 ChatGPT？
+      </h2>
+      <ol class="mt-6 max-w-3xl list-decimal space-y-3 pl-5 text-ink-700">
+        <li>
+          打开
+          <a class="font-semibold text-brand-700 hover:underline" href={product.url} target="_blank" rel="noopener noreferrer">
+            ChatGPT 使用入口
+          </a>
+          ，完成登录或进入对话。
+        </li>
+        <li>用「角色 + 任务 + 约束 + 输出格式」提问，先要大纲再扩写。</li>
+        <li>对重要事实人工复核；敏感信息不要随意上传。</li>
+        <li>
+          需要提示词模板时查看
+          <a class="font-semibold text-brand-700 hover:underline" href="/guides/prompt-templates-library/">
+            提示词模板库
+          </a>
+          ；学英语可看
+          <a class="font-semibold text-brand-700 hover:underline" href="/guides/chatgpt-learn-english-guide-2026/">
+            ChatGPT 学英语教程
+          </a>
+          。
+        </li>
+      </ol>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={product.url} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          立即体验 ChatGPT
+        </a>
+        <a href="/guides/chatgpt-free-vs-plus/" class="btn-secondary">免费版 vs Plus</a>
+        <a href="/guides/chatgpt-access-troubleshooting/" class="btn-secondary">访问问题排查</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mt-14" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+        ChatGPT 常见问题
+      </h2>
+      <p class="mt-3 text-ink-600">关于定义、上手、免费版、国内使用与提问技巧的集中解答。</p>
+      <div class="mt-6 max-w-3xl">
+        <FAQ items={chatgptIntro.faqs} />
+      </div>
+      <p class="mt-4 text-sm">
+        <a href="/faq/" class="font-semibold text-brand-600 hover:underline">查看全站 FAQ →</a>
+      </p>
+    </section>
+
+    <!-- 相关教程 -->
+    <section class="mt-14" aria-labelledby="guides-heading">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 id="guides-heading" class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">
+            ChatGPT 相关教程
+          </h2>
+          <p class="mt-3 text-ink-600">从入门、国内使用到 API 与提示词，按需深入。</p>
+        </div>
+        <a href="/guides/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">
+          全部教程 →
+        </a>
+      </div>
+      {
+        guides.length === 0 ? (
+          <p class="mt-6 rounded-xl border border-dashed border-ink-200 p-8 text-ink-500">
+            专栏文章正在准备中。
+          </p>
+        ) : (
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {guides.map((guide) => (
+              <ArticleCard guide={guide} />
+            ))}
+          </div>
+        )
+      }
+    </section>
   </div>
 </BaseLayout>
