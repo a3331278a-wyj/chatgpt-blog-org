@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400">
+  <rect width="960" height="400" rx="24" fill="#f8fafc"/>
+  <text x="48" y="52" fill="#072849" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Prompt Frame: R-T-C-F</text>
+
+  <rect x="48" y="90" width="200" height="240" rx="18" fill="#0c8ce9"/>
+  <text x="72" y="150" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">R</text>
+  <text x="72" y="200" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Role</text>
+  <text x="72" y="240" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">Who AI plays</text>
+
+  <rect x="268" y="90" width="200" height="240" rx="18" fill="#0158a1"/>
+  <text x="292" y="150" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">T</text>
+  <text x="292" y="200" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Task</text>
+  <text x="292" y="240" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">What to deliver</text>
+
+  <rect x="488" y="90" width="200" height="240" rx="18" fill="#0c8ce9"/>
+  <text x="512" y="150" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">C</text>
+  <text x="512" y="200" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Constraints</text>
+  <text x="512" y="240" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">Tone / length</text>
+
+  <rect x="708" y="90" width="200" height="240" rx="18" fill="#0158a1"/>
+  <text x="732" y="150" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">F</text>
+  <text x="732" y="200" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Format</text>
+  <text x="732" y="240" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">Bullet / table</text>
+</svg>

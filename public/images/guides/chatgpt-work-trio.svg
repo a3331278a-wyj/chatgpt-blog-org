@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380">
+  <rect width="960" height="380" rx="24" fill="#f0f7ff"/>
+  <text x="48" y="52" fill="#072849" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">3 Office Tasks One Method</text>
+
+  <rect x="48" y="90" width="260" height="220" rx="20" fill="#ffffff" stroke="#b9dffd" stroke-width="2"/>
+  <circle cx="88" cy="140" r="22" fill="#0c8ce9"/>
+  <text x="81" y="147" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">1</text>
+  <text x="78" y="200" fill="#0158a1" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Email</text>
+  <text x="78" y="240" fill="#54708f" font-family="Arial, Helvetica, sans-serif" font-size="15">Goal / tone / ask</text>
+  <text x="78" y="270" fill="#54708f" font-family="Arial, Helvetica, sans-serif" font-size="15">Short actionable</text>
+
+  <rect x="350" y="90" width="260" height="220" rx="20" fill="#ffffff" stroke="#b9dffd" stroke-width="2"/>
+  <circle cx="390" cy="140" r="22" fill="#0c8ce9"/>
+  <text x="383" y="147" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">2</text>
+  <text x="380" y="200" fill="#0158a1" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Weekly</text>
+  <text x="380" y="240" fill="#54708f" font-family="Arial, Helvetica, sans-serif" font-size="15">Done / impact / next</text>
+  <text x="380" y="270" fill="#54708f" font-family="Arial, Helvetica, sans-serif" font-size="15">No fluff metrics</text>
+
+  <rect x="652" y="90" width="260" height="220" rx="20" fill="#0158a1"/>
+  <circle cx="692" cy="140" r="22" fill="#36a7f8"/>
+  <text x="685" y="147" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">3</text>
+  <text x="682" y="200" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Meeting</text>
+  <text x="682" y="240" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">Decision / owner</text>
+  <text x="682" y="270" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="15">Due date / open</text>
+</svg>
