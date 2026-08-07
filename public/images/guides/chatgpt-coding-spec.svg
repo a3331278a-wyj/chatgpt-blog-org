@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400">
+  <rect width="960" height="400" rx="24" fill="#f8fafc"/>
+  <text x="48" y="52" fill="#072849" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Weak Ask vs Strong Spec</text>
+
+  <rect x="48" y="90" width="420" height="260" rx="20" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="72" y="140" fill="#c2410c" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Weak</text>
+  <text x="72" y="190" fill="#9a3412" font-family="Arial, Helvetica, sans-serif" font-size="17">Write a login for me.</text>
+  <text x="72" y="235" fill="#9a3412" font-family="Arial, Helvetica, sans-serif" font-size="15">No language / stack</text>
+  <text x="72" y="270" fill="#9a3412" font-family="Arial, Helvetica, sans-serif" font-size="15">No acceptance checks</text>
+  <text x="72" y="305" fill="#9a3412" font-family="Arial, Helvetica, sans-serif" font-size="15">Hard to verify</text>
+
+  <rect x="500" y="90" width="420" height="260" rx="20" fill="#f0f7ff" stroke="#7cc5fc" stroke-width="2"/>
+  <text x="524" y="140" fill="#0158a1" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Strong</text>
+  <text x="524" y="190" fill="#0b3f6e" font-family="Arial, Helvetica, sans-serif" font-size="16">Node + Express, email login</text>
+  <text x="524" y="230" fill="#0158a1" font-family="Arial, Helvetica, sans-serif" font-size="15">Return JWT, validate input</text>
+  <text x="524" y="265" fill="#0158a1" font-family="Arial, Helvetica, sans-serif" font-size="15">Include 2 failing cases</text>
+  <text x="524" y="300" fill="#0c8ce9" font-family="Arial, Helvetica, sans-serif" font-size="15">Minimal files only</text>
+</svg>
